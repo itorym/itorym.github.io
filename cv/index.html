@@ -21,248 +21,318 @@ html { scrollbar-gutter: stable; }
   box-sizing: border-box;
 }
 </style> <style>
-/* Common CV design */
-.cv {
-  --academic-cv-accent: var(--global-theme-color, #87b8cb);
-  --academic-cv-text: var(--global-text-color, #dce4ec);
-  --academic-cv-bg: var(--global-bg-color, #111820);
-  --academic-cv-border: color-mix(in srgb, var(--academic-cv-text) 16%, transparent);
-  --academic-cv-surface: color-mix(in srgb, var(--academic-cv-bg) 88%, var(--academic-cv-text) 12%);
-  --academic-cv-hover: color-mix(in srgb, var(--academic-cv-accent) 45%, transparent);
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-}
-.cv, .cv * { box-sizing: border-box; }
+  /* Common CV design */
+  .cv {
+    --academic-cv-accent: var(--global-theme-color, #87b8cb);
+    --academic-cv-text: var(--global-text-color, #dce4ec);
+    --academic-cv-bg: var(--global-bg-color, #111820);
+    --academic-cv-border: color-mix(in srgb, var(--academic-cv-text) 16%, transparent);
+    --academic-cv-surface: color-mix(in srgb, var(--academic-cv-bg) 88%, var(--academic-cv-text) 12%);
+    --academic-cv-hover: color-mix(in srgb, var(--academic-cv-accent) 45%, transparent);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .cv,
+  .cv * {
+    box-sizing: border-box;
+  }
 
-/* Keep all outer section cards intact, with consistent headings. */
-.cv > .card,
-.cv > a.anchor + .card {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  margin-left: 0;
-  margin-right: 0;
-  padding: 1.2rem 1.3rem;
-  background: transparent;
-  border: 1px solid var(--academic-cv-border);
-  border-radius: .85rem;
-  box-shadow: none;
-  color: var(--academic-cv-text);
-}
-.cv > .card > .card-title,
-.cv > a.anchor + .card > .card-title {
-  margin: 0 0 1.05rem;
-  padding-bottom: .75rem;
-  border-bottom: 1px solid var(--academic-cv-border);
-  font-size: clamp(1.20rem, 2vw, 1.50rem);
-  font-weight: 600;
-  line-height: 1.35;
-  letter-spacing: -.012em;
-  color: var(--academic-cv-text);
-}
+  /* Timeline entries are groups, with no outer list markers. */
+  .cv ul.list-group,
+  .cv ul.list-group > li.list-group-item {
+    list-style: none;
+  }
 
-/* Generic RenderCV bullet sections: one UL is generated per bullet. */
-.cv > a.anchor:is(
-  #academic-service,
-  #honors-awards,
-  #selected-publications,
-  #selected-talks
-) + .card > div > ul.list-group {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  min-width: 0;
-}
-.cv > a.anchor:is(
-  #academic-service,
-  #honors-awards,
-  #selected-publications,
-  #selected-talks
-) + .card .list-group-item p { margin: 0; }
+  /* Keep all outer section cards intact, with consistent headings. */
+  .cv > .card,
+  .cv > a.anchor + .card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.2rem 1.3rem;
+    background: transparent;
+    border: 1px solid var(--academic-cv-border);
+    border-radius: 0.85rem;
+    box-shadow: none;
+    color: var(--academic-cv-text);
+  }
+  .cv > .card > .card-title,
+  .cv > a.anchor + .card > .card-title {
+    margin: 0 0 1.05rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--academic-cv-border);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.012em;
+    color: var(--academic-cv-text);
+  }
 
-/* Academic Service: one full-width column, no nested cards. */
-.cv > a#academic-service + .card > div {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-}
-.cv > a#academic-service + .card > div > ul.list-group + ul.list-group {
-  border-top: 1px solid var(--academic-cv-border);
-}
-.cv > a#academic-service + .card > div > ul.list-group > li.list-group-item,
-.cv > a#academic-service + .card > div > .card-text {
-  display: block;
-  margin: 0;
-  padding: .9rem 1rem;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  color: var(--academic-cv-text);
-  line-height: 1.65;
-  overflow-wrap: anywhere;
-}
-.cv > a#academic-service + .card > div > ul.list-group > li.list-group-item strong,
-.cv > a#academic-service + .card > div > .card-text strong {
-  display: block;
-  margin-bottom: .20rem;
-  color: var(--academic-cv-accent);
-  font-weight: 650;
-}
+  /* Generic RenderCV bullet sections: one UL is generated per bullet. */
+  .cv > a.anchor:is(#academic-service, #honors-awards, #selected-publications, #selected-talks) + .card > div > ul.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    min-width: 0;
+  }
+  .cv > a.anchor:is(#academic-service, #honors-awards, #selected-publications, #selected-talks) + .card .list-group-item p {
+    margin: 0;
+  }
 
-/* Awards: Education-like timeline without inner boxes.
+  /* Academic Service: one full-width column, no nested cards. */
+  .cv > a#academic-service + .card > div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .cv > a#academic-service + .card > div > ul.list-group + ul.list-group {
+    border-top: 1px solid var(--academic-cv-border);
+  }
+  .cv > a#academic-service + .card > div > ul.list-group > li.list-group-item,
+  .cv > a#academic-service + .card > div > .card-text {
+    display: block;
+    margin: 0;
+    padding: 0.9rem 1rem;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--academic-cv-text);
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+  }
+  .cv > a#academic-service + .card > div > ul.list-group > li.list-group-item strong,
+  .cv > a#academic-service + .card > div > .card-text strong {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--academic-cv-accent);
+    font-weight: 650;
+  }
+
+  /* Awards: Education-like timeline without inner boxes.
    The renderer produces: <li><strong>2026:</strong> Award title...</li>
    Avoid CSS Grid on that <li>, because its text is not a wrapped element.
    Use a floated year in the left gutter; the remaining text occupies the
    full right-hand content column and wraps normally. */
-.cv > a#honors-awards + .card > div > ul.list-group {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-}
-.cv > a#honors-awards + .card > div > ul.list-group + ul.list-group {
-  border-top: 1px solid var(--academic-cv-border);
-}
-.cv > a#honors-awards + .card > div > ul.list-group > li.list-group-item,
-.cv > a#honors-awards + .card > div > .card-text {
-  display: flow-root;
-  width: 100%;
-  min-width: 0;
-  margin: 0;
-  padding: .85rem 1rem .85rem 8.35rem;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  color: var(--academic-cv-text);
-  line-height: 1.6;
-  white-space: normal;
-  word-break: normal;
-  overflow-wrap: break-word;
-}
-.cv > a#honors-awards + .card > div > ul.list-group > li.list-group-item > strong:first-child,
-.cv > a#honors-awards + .card > div > .card-text > strong:first-child {
-  float: left;
-  display: inline-block;
-  width: auto;
-  max-width: 6.8rem;
-  margin-left: -7.35rem;
-  padding: .12rem .35rem;
-  color: var(--academic-cv-accent);
-  background: color-mix(in srgb, var(--academic-cv-accent) 15%, transparent);
-  border-radius: .2rem;
-  font-size: .85rem;
-  font-weight: 650;
-  line-height: 1.4;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-
-/* Selected publications/talks: keep the established inner-card style. */
-.cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > ul.list-group {
-  margin-bottom: .7rem;
-}
-.cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > ul.list-group:last-child {
-  margin-bottom: 0;
-}
-.cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > ul.list-group > li.list-group-item,
-.cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > .card-text {
-  display: block;
-  margin: 0;
-  padding: .9rem 1rem;
-  border: 1px solid var(--academic-cv-border);
-  border-radius: .7rem;
-  background: var(--academic-cv-surface);
-  color: var(--academic-cv-text);
-  line-height: 1.65;
-  white-space: normal;
-  overflow-wrap: anywhere;
-  transition: border-color .2s ease;
-}
-.cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > ul.list-group > li.list-group-item:hover,
-.cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > .card-text:hover {
-  border-color: var(--academic-cv-hover);
-}
-.cv > a.anchor:is(#selected-publications, #selected-talks) + .card a {
-  color: var(--academic-cv-accent);
-  text-underline-offset: .18rem;
-  font-weight: 550;
-}
-
-/* Teaching Experience: reuse the official Education include,
-   keep its normal padding and strip *only* nested borders/backgrounds. */
-.cv > a.anchor#lectures + .card > div:not(.academic-teaching-education) {
-  display: none;
-}
-.cv > a.anchor#lectures + .card > .academic-teaching-education {
-  width: 100%;
-  max-width: 100%;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-}
-.cv > a.anchor#lectures + .card .academic-teaching-education :is(
-  .row,
-  .card,
-  .card-body,
-  .card-text,
-  .list-group,
-  .list-group-item,
-  .academic-teaching-entry
-) {
-  background: transparent !important;
-  border: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-}
-
-/* Keep the older custom teaching-entry selectors harmless if present. */
-.cv .academic-teaching-entry {
-  display: grid;
-  grid-template-columns: minmax(7rem, 20%) minmax(0, 1fr);
-  align-items: start;
-  column-gap: 1.35rem;
-  row-gap: .35rem;
-  padding: .85rem 0;
-  border-bottom: 1px solid var(--academic-cv-border);
-}
-.cv .academic-teaching-entry:first-child { padding-top: .25rem; }
-.cv .academic-teaching-entry:last-child { border-bottom: 0; padding-bottom: .2rem; }
-.cv .academic-teaching-dates {
-  color: var(--academic-cv-accent);
-  font-size: .90rem;
-  font-variant-numeric: tabular-nums;
-  line-height: 1.6;
-}
-.cv .academic-teaching-info { min-width: 0; line-height: 1.55; }
-.cv .academic-teaching-degree { color: var(--academic-cv-text); font-weight: 650; font-size: 1rem; }
-.cv .academic-teaching-institution { font-weight: 550; margin-top: .12rem; }
-.cv .academic-teaching-area,
-.cv .academic-teaching-location { opacity: .78; font-size: .91rem; margin-top: .12rem; }
-
-@media (max-width: 680px) {
-  .cv > .card,
-  .cv > a.anchor + .card { padding: .95rem; }
+  .cv > a#honors-awards + .card > div > ul.list-group {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .cv > a#honors-awards + .card > div > ul.list-group + ul.list-group {
+    border-top: 1px solid var(--academic-cv-border);
+  }
   .cv > a#honors-awards + .card > div > ul.list-group > li.list-group-item,
   .cv > a#honors-awards + .card > div > .card-text {
-    padding: .8rem .55rem .8rem 6.05rem;
+    display: flow-root;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0.85rem 1rem 0.85rem 8.35rem;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--academic-cv-text);
+    line-height: 1.6;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
   .cv > a#honors-awards + .card > div > ul.list-group > li.list-group-item > strong:first-child,
   .cv > a#honors-awards + .card > div > .card-text > strong:first-child {
-    margin-left: -5.5rem;
+    float: left;
+    display: inline-block;
+    width: auto;
+    max-width: 6.8rem;
+    margin-left: -7.35rem;
+    padding: 0.12rem 0.35rem;
+    color: var(--academic-cv-accent);
+    background: color-mix(in srgb, var(--academic-cv-accent) 15%, transparent);
+    border-radius: 0.2rem;
+    font-size: 0.85rem;
+    font-weight: 650;
+    line-height: 1.4;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
   }
-  .cv > a#academic-service + .card > div > ul.list-group > li.list-group-item,
-  .cv > a#academic-service + .card > div > .card-text { padding: .8rem .55rem; }
-  .cv .academic-teaching-entry { grid-template-columns: 1fr; row-gap: .25rem; }
-}
-@media (prefers-reduced-motion: reduce) {
+
+  /* Selected publications/talks: keep the established inner-card style. */
+  .cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > ul.list-group {
+    margin-bottom: 0.7rem;
+  }
+  .cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > ul.list-group:last-child {
+    margin-bottom: 0;
+  }
   .cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > ul.list-group > li.list-group-item,
-  .cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > .card-text { transition: none; }
-}
+  .cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > .card-text {
+    display: block;
+    margin: 0;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--academic-cv-border);
+    border-radius: 0.7rem;
+    background: var(--academic-cv-surface);
+    color: var(--academic-cv-text);
+    line-height: 1.65;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    transition: border-color 0.2s ease;
+  }
+  .cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > ul.list-group > li.list-group-item:hover,
+  .cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > .card-text:hover {
+    border-color: var(--academic-cv-hover);
+  }
+  .cv > a.anchor:is(#selected-publications, #selected-talks) + .card a {
+    color: var(--academic-cv-accent);
+    text-underline-offset: 0.18rem;
+    font-weight: 550;
+  }
+
+  /* Teaching Experience: reuse the official Education include,
+   keep its normal padding and strip *only* nested borders/backgrounds. */
+  .cv > a.anchor#lectures + .card > div:not(.academic-teaching-education) {
+    display: none;
+  }
+  .cv > a.anchor#lectures + .card > .academic-teaching-education {
+    width: 100%;
+    max-width: 100%;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+  .cv
+    > a.anchor#lectures
+    + .card
+    .academic-teaching-education
+    :is(.row, .card, .card-body, .card-text, .list-group, .list-group-item, .academic-teaching-entry) {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Keep the older custom teaching-entry selectors harmless if present. */
+  .cv .academic-teaching-entry {
+    display: grid;
+    grid-template-columns: minmax(7rem, 20%) minmax(0, 1fr);
+    align-items: start;
+    column-gap: 1.35rem;
+    row-gap: 0.35rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--academic-cv-border);
+  }
+  .cv .academic-teaching-entry:first-child {
+    padding-top: 0.25rem;
+  }
+  .cv .academic-teaching-entry:last-child {
+    border-bottom: 0;
+    padding-bottom: 0.2rem;
+  }
+  .cv .academic-teaching-dates {
+    color: var(--academic-cv-accent);
+    font-size: 0.9rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.6;
+  }
+  .cv .academic-teaching-info {
+    min-width: 0;
+    line-height: 1.55;
+  }
+  .cv .academic-teaching-degree {
+    color: var(--academic-cv-text);
+    font-weight: 650;
+    font-size: 1rem;
+  }
+  .cv .academic-teaching-institution {
+    font-weight: 550;
+    margin-top: 0.12rem;
+  }
+  .cv .academic-teaching-area,
+  .cv .academic-teaching-location {
+    opacity: 0.78;
+    font-size: 0.91rem;
+    margin-top: 0.12rem;
+  }
+
+  @media (max-width: 680px) {
+    .cv > .card,
+    .cv > a.anchor + .card {
+      padding: 0.95rem;
+    }
+    .cv > a#honors-awards + .card > div > ul.list-group > li.list-group-item,
+    .cv > a#honors-awards + .card > div > .card-text {
+      padding: 0.8rem 0.55rem 0.8rem 6.05rem;
+    }
+    .cv > a#honors-awards + .card > div > ul.list-group > li.list-group-item > strong:first-child,
+    .cv > a#honors-awards + .card > div > .card-text > strong:first-child {
+      margin-left: -5.5rem;
+    }
+    .cv > a#academic-service + .card > div > ul.list-group > li.list-group-item,
+    .cv > a#academic-service + .card > div > .card-text {
+      padding: 0.8rem 0.55rem;
+    }
+    .cv .academic-teaching-entry {
+      grid-template-columns: 1fr;
+      row-gap: 0.25rem;
+    }
+  }
+  /* Stack each timeline entry as a single group on phones. Remove the
+   desktop date offset and table/paragraph margins before spacing rows. */
+  @media (max-width: 575.98px) {
+    .cv ul.list-group {
+      padding-left: 0;
+    }
+    .cv .list-group-item:has(> .row > .date-column) {
+      padding: 0.85rem 0;
+    }
+    .cv .list-group-item:has(> .row > .date-column) + .list-group-item {
+      margin-top: 0.5rem;
+    }
+    .cv .list-group-item > .row:has(> .date-column) {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.35rem;
+      margin: 0;
+    }
+    .cv .list-group-item > .row > .date-column,
+    .cv .list-group-item > .row > .date-column + div {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      padding: 0;
+      margin: 0;
+    }
+    .cv .list-group-item > .row > .date-column {
+      transform: none;
+      text-align: left;
+    }
+    @layer utilities {
+      .cv .list-group-item > .row > .date-column + div {
+        margin-top: 0 !important; /* Override the renderer's mt-2 utility in its layer. */
+      }
+    }
+    .cv .date-column .table-cv {
+      margin: 0;
+    }
+    .cv .date-column .location {
+      margin: 0.2rem 0 0;
+    }
+    .cv .list-group-item > .row > .date-column + div > h6 {
+      margin-left: 0 !important; /* Align with the date instead of ml-1. */
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > ul.list-group > li.list-group-item,
+    .cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > .card-text {
+      transition: none;
+    }
+  }
 </style> <style>
 /* Legacy fallback selectors; the new section has no generic bullet output. */
 .cv > a.anchor#academic-service + .card > .academic-service-timeline ~ div,
