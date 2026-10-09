@@ -1,0 +1,105 @@
+{% comment %}
+  Academic Service: dated CV rows inserted by academic_service_timeline.liquid.
+  The plugin's old bullet renderer is hidden ONLY for this section. The outer
+  CV section frame and heading remain the originals; all other CV sections
+  are unaffected. Use after academic_cv_style.liquid.
+{% endcomment %}
+<style>
+/* Hide the plugin output only when the new timeline is actually present. */
+.cv > a.anchor#academic-service + .card > .academic-service-timeline ~ div,
+.cv > a.anchor#academic-service + .card > .academic-service-timeline ~ ul.list-group {
+  display: none !important;
+}
+.cv > a.anchor#academic-service + .card > .academic-service-timeline {
+  display: block !important;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: var(--global-text-color);
+}
+.cv .academic-service-timeline,
+.cv .academic-service-timeline * { box-sizing: border-box; }
+.cv .academic-service-group:not(:first-child) {
+  border-top: 1px solid color-mix(in srgb, var(--global-text-color, #dce4ec) 16%, transparent);
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+.cv .academic-service-group-title {
+  margin: 0 0 .85rem;
+  padding: 0;
+  color: var(--global-theme-color, #2caccb);
+  font-size: .95rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+.cv .academic-service-entry {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  align-items: start;
+  column-gap: .55rem;
+  row-gap: .35rem;
+  margin: 0 0 .85rem;
+  padding: 0;
+  line-height: 1.5;
+}
+.cv .academic-service-entry:last-child { margin-bottom: 0; }
+.cv .academic-service-date { min-width: 0; padding-top: .10rem; }
+.cv .academic-service-badge {
+  display: inline-block;
+  max-width: 100%;
+  padding: .20rem .38rem;
+  border-radius: .2rem;
+  color: var(--global-theme-color, #3ab5d5);
+  background: color-mix(in srgb, var(--global-theme-color, #3ab5d5) 21%, transparent);
+  font-size: .76rem;
+  font-weight: 700;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.cv .academic-service-range { font-size: .71rem; letter-spacing: -.015em; }
+.cv .academic-service-detail { min-width: 0; overflow-wrap: break-word; }
+.cv .academic-service-primary {
+  margin: 0;
+  font-size: .98rem;
+  font-weight: 650;
+  color: var(--global-text-color);
+}
+.cv .academic-service-secondary {
+  margin: .13rem 0 0;
+  font-size: .91rem;
+  font-weight: 400;
+  color: var(--global-text-color);
+  opacity: .77;
+}
+.cv .academic-service-conferences { padding-top: .12rem; }
+.cv .academic-service-conference {
+  display: inline;
+  font-size: .98rem;
+  font-weight: 500;
+  color: var(--global-text-color);
+}
+.cv .academic-service-conference + .academic-service-conference::before {
+  content: "  ·  ";
+  white-space: pre;
+  opacity: .55;
+}
+.cv .academic-service-organizing-role + .academic-service-organizing-role {
+  margin-top: .5rem;
+}
+.cv .academic-service-unknown p { margin: 0; }
+@media (max-width: 430px) {
+  .cv .academic-service-entry { grid-template-columns: minmax(0, 6.5rem) minmax(0, 1fr); column-gap: .65rem; }
+  .cv .academic-service-range { white-space: normal; overflow-wrap: anywhere; }
+  .cv .academic-service-primary, .cv .academic-service-conference { font-size: .93rem; }
+}
+@media (max-width: 340px) {
+  .cv .academic-service-entry { grid-template-columns: minmax(0, 1fr); }
+  .cv .academic-service-range { white-space: nowrap; }
+}
+</style>

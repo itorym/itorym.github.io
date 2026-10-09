@@ -1,0 +1,136 @@
+# RenderCV-formatted CV based on public Google Sites profile.
+cv:
+  name: Ryoma Ito
+  label: Planning Manager and Research Manager
+  email: itorym [at] nict.go.jp
+  location: Tokyo, Japan
+  website: https://itorym.github.io/
+  social_networks:
+  - network: GitHub
+    username: itorym
+  - network: ORCID
+    username: 0000-0002-4929-8974
+  sections:
+    Experience:
+    - company: National Institute of Information and Communications Technology
+      position: Planning Manager, Strategic Planning Office, Strategic Planning Department
+      start_date: '2026'
+      end_date: present
+      location: Japan
+    - company: National Institute of Information and Communications Technology
+      position: Research Manager, Security Fundamentals Laboratory, Cybersecurity Research Institute
+      start_date: '2026'
+      end_date: present
+      location: Japan
+    - company: The University of Osaka
+      position: Guest Associate Professor, Graduate School of Information Science and Technology
+      start_date: '2025'
+      end_date: present
+      location: Japan
+    - company: Toho University
+      position: Part-time Lecturer, Department of Information Science, Faculty of Science
+      start_date: '2025'
+      end_date: present
+      location: Japan
+    - company: National Institute of Information and Communications Technology
+      position: Senior Researcher, Security Fundamentals Laboratory, Cybersecurity Research Institute
+      start_date: '2020'
+      end_date: '2026'
+      location: Japan
+    - company: Japan Air Self-Defense Force, Ministry of Defense
+      position: Information and Communications Officer
+      start_date: '2009'
+      end_date: '2020'
+      location: Japan
+    Education:
+    - institution: The University of Osaka
+      #area: Engineering
+      degree: Ph.D. in  Engineering
+      start_date: '2017'
+      end_date: '2019'
+      location: Japan
+      highlights:
+      - 'Supervisor: Prof. Atsuko Miyaji'
+      - 'Dissertation: [A Study on Statistical Cryptanalysis of Stream Ciphers](https://ir.library.osaka-u.ac.jp/repo/ouka/all/73465/30703_Dissertation.pdf)'
+    - institution: Japan Advanced Institute of Science and Technology
+      #area: Information Science
+      degree: Master’s degree in Information Science
+      start_date: '2013'
+      end_date: '2015'
+      location: Japan
+      highlights:
+      - 'Supervisor: Prof. Atsuko Miyaji'
+    - institution: National Defense Academy
+      #area: Science and Technology
+      degree: Bachelor’s degree in Science and Technology
+      start_date: '2005'
+      end_date: '2009'
+      location: Japan
+    Academic Service:
+      - bullet: "**Editorial Board:** IACR Transactions on Symmetric Cryptology (ToSC), 2022/2023--2025/2026"
+      - bullet: "**Program Committee:** FSE 2026, FSE 2025, ISC 2024, ACISP 2024, ADSC 2024, FSE 2024, ADSC 2023, FSE 2023"
+      - bullet: "**Conference Organization:** Publication Chair (IWSEC 2024); Local Organizing Chair (ACNS 2023, ACNS 2021); Publicity Chair (ISPEC 2022)"
+    Awards:
+      - title: SCIS Paper Award
+        date: '2026'
+        awarder: SCIS 2025, ISEC group of IEICE
+        location: Japan
+      - title: CSS Best Paper Award
+        date: '2025'
+        awarder: CSS 2025, IPSJ
+        location: Japan
+      - title: SCIS Innovation Paper Award
+        date: '2025'
+        awarder: SCIS 2024, ISEC group of IEICE
+        location: Japan
+      - title: CSS Paper Award
+        date: '2024'
+        awarder: CSS 2024, IPSJ
+        location: Japan
+      - title: CSS Ethical Practice Award
+        date: '2024'
+        awarder: CSS 2024, IPSJ
+        location: Japan
+      - title: CSS Student Paper Award
+        date: '2024'
+        awarder: CSS 2023, IPSJ
+        location: Japan
+      - title: JIP Specially Selected Paper Certificate
+        date: '2023'
+        awarder: IPSJ
+        location: Japan
+      - title: IPSJ Yamashita SIG Research Award 
+        date: '2023'
+        awarder: IPSJ
+        location: Japan
+      - title: SCIS Innovation Paper Award
+        date: '2022'
+        awarder: SCIS 2021, ISEC group of IEICE
+        location: Japan
+      - title: CSS Encouragement Research Award
+        date: '2021'
+        awarder: CSS 2021, IPSJ
+        location: Japan
+      - title: SCIS Paper Award
+        date: '2016'
+        awarder: SCIS 2015, ISEC group of IEICE
+        location: Japan
+      - title: Best Student Award
+        date: '2015'
+        awarder: Japan Advanced Institute of Science and Technology
+        location: Japan
+      - title: Best Student Award
+        date: '2019'
+        awarder: National Defense Academy
+        location: Japan
+    Teaching Experience:
+      - institution: Toho University
+        degree: Part-time Lecturer
+        area: Social Informatics
+        start_date: '2025'
+        end_date: present
+        location: Japan
+    Selected Publications:
+      - bullet: "See the [complete publications list](/publications/)."
+    Selected Talks:
+      - bullet: "See the [Talks page](/talks/) for invited talks, lectures, and tutorials."
