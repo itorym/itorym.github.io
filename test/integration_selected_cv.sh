@@ -32,12 +32,16 @@ normalize = ->(text) { text.gsub(/\s+/, ' ').strip }
   references.zip(entries).each do |reference, rendered|
     assert.call(rendered.at_css('.title'), 'Missing result title')
     assert.call(rendered.at_css('.academic-cv-selected-authors'), 'Missing authors')
-    assert.call(rendered.parent.at_css('.date-column .badge'), 'Missing year badge')
+    badge = rendered.parent.at_css('.date-column .badge')
+    assert.call(badge, 'Missing venue badge')
     if kind == 'Publications'
       paper = bib.query("@*[key=#{reference['bibkey']}]").first
       assert.call(paper, "Unknown bibliography key: #{reference['bibkey']}")
+      venue = [paper[:abbr], paper[:journal], paper[:booktitle]].find { |value| !value.to_s.empty? }
+      assert.call(normalize.call(badge.text) == normalize.call(venue.to_s), 'Publication venue badge diverged from bibliography')
+      assert.call(rendered.text.include?(paper[:year].to_s), 'Publication year is missing')
       assert.call(normalize.call(rendered.at_css('.title').text) == normalize.call(paper[:title].to_s.delete('{}')), 'Publication title diverged from bibliography')
-      assert.call(rendered.at_css('.academic-cv-selected-authors strong')&.text == 'Ryoma Ito', 'CV owner is not emphasized')
+      assert.call(normalize.call(rendered.at_css('.academic-cv-selected-authors strong')&.text.to_s) == 'Ryoma Ito', 'CV owner is not emphasized')
       if paper[:doi] && !paper[:doi].to_s.empty?
         href = rendered.at_css('.academic-cv-selected-links a')['href']
         assert.call(href == 'https://doi.org/' + paper[:doi].to_s.gsub('\\_', '_'), 'DOI link is missing or malformed')
@@ -49,7 +53,8 @@ normalize = ->(text) { text.gsub(/\s+/, ' ').strip }
     else
       talk = talks.find { |entry| entry['title'] == reference['talk_title'] }
       assert.call(talk, "Unknown talk: #{reference['talk_title']}")
-      assert.call(rendered.at_css('.title').text == (talk["title_#{language}"] || talk['title']), 'Talk title diverged')
+      assert.call(badge.text == (talk['abbr'] || talk['event']), 'Talk venue badge diverged')
+      assert.call(normalize.call(rendered.at_css('.title').text) == normalize.call(talk["title_#{language}"] || talk['title']), 'Talk title diverged')
       assert.call(rendered.text.include?(talk["speaker_#{language}"] || talk['speaker']), 'Missing speaker') if talk['speaker']
       assert.call(rendered.text.include?(talk["description_#{language}"] || talk['description']), 'Missing talk description') if talk['description']
       %w[url slides video].each do |resource|
