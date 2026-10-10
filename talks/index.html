@@ -78,6 +78,19 @@ html { scrollbar-gutter: stable; }
   box-sizing: border-box;
 }
 </style> <style>
+    /* Keep the existing sidebar TOC above the content on phones, as on CV. */
+    @media (max-width: 576px) {
+      #toc-sidebar {
+        visibility: visible;
+        height: auto;
+        position: static;
+        margin-bottom: 1.5rem;
+      }
+    }
+    .academic-content .academic-section-heading h2[id] {
+      scroll-margin-top: 90px;
+    }
+  </style> <style>
 /* Scoped enhancement for the Publications and Activities pages.
    Uses al-folio theme colors, including dark/light mode. */
 .academic-content {
