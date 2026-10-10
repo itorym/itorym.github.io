@@ -4,7 +4,64 @@
   }
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://itorym.github.io/activities/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Ryoma Ito </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Home </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">Curriculum Vitae </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/talks/">Talks </a> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Activities</h1> <p class="post-description">Academic service and awards</p> </header> <article> <style>
+  </script> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Ryoma Ito </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Home </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">Curriculum Vitae </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/talks/">Talks </a> </li> <li class="nav-item language-switch-item"> <nav class="language-switch-options" aria-label="Language"> <span class="language-switch-option is-current" lang="en" aria-current="true">English</span> <a class="language-switch-option" href="/ja/" lang="ja" hreflang="ja" rel="alternate">日本語</a> </nav> <style>
+    #navbar .language-switch-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-left: 0.75rem;
+      padding-left: 1rem;
+      border-left: 1px solid color-mix(in srgb, var(--global-text-color) 18%, transparent);
+    }
+    #navbar .language-switch-options {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.15rem;
+      padding: 0.2rem;
+      border: 1px solid color-mix(in srgb, var(--global-text-color) 22%, transparent);
+      border-radius: 99px;
+      background: var(--global-bg-color);
+    }
+    #navbar .language-switch-option {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 99px;
+      color: var(--global-text-color);
+      font-size: 0.8rem;
+      font-weight: 500;
+      line-height: 1.25;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    #navbar .language-switch-option.is-current {
+      background: color-mix(in srgb, var(--global-theme-color) 22%, var(--global-bg-color));
+      color: var(--global-theme-color);
+      font-weight: 700;
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--global-theme-color) 30%, transparent);
+    }
+    #navbar a.language-switch-option:hover {
+      background: color-mix(in srgb, var(--global-text-color) 8%, var(--global-bg-color));
+      text-decoration: underline;
+    }
+    #navbar a.language-switch-option:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 2px;
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      @media (max-width: 575.98px) {
+      #navbar .language-switch-item {
+        align-self: flex-start;
+        flex-wrap: wrap;
+        margin: 0.5rem 0 0;
+        padding: 0.85rem 0 0.5rem;
+        border-left: 0;
+        border-top: 1px solid color-mix(in srgb, var(--global-text-color) 18%, transparent);
+      }
+    }
+  </style> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change color theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Activities</h1> <p class="post-description">Academic service and awards</p> </header> <article> <style>
 html { scrollbar-gutter: stable; }
 .container[role="main"] {
   width: 100%;
@@ -104,49 +161,6 @@ html { scrollbar-gutter: stable; }
 .academic-talks .academic-talk-card p { margin: .2rem 0; }
 .academic-talks .academic-talk-card .title { margin: 0 0 .3rem; }
 .academic-talks .academic-talk-event { font-style: italic; }
-/* Links share the card's accent palette in both color modes. */
-.academic-publications .academic-bibliography .links,
-.academic-talks .academic-talk-card .links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .4rem;
-  margin-top: .65rem;
-}
-.academic-publications .academic-bibliography .links .btn,
-.academic-talks .academic-talk-card .links .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 1.85rem;
-  margin: 0;
-  padding: .3rem .75rem;
-  border: 1px solid color-mix(in srgb, var(--academic-accent) 35%, transparent);
-  border-radius: 99px;
-  background: color-mix(in srgb, var(--academic-accent) 10%, var(--global-bg-color, #111820));
-  color: var(--global-text-color, #ecf0f4);
-  font-size: .74rem;
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: .02em;
-  text-decoration: none;
-  box-shadow: none;
-  cursor: pointer;
-  transition: background-color .2s ease, border-color .2s ease;
-}
-.academic-publications .academic-bibliography .links .btn:hover,
-.academic-publications .academic-bibliography .links .btn:focus-visible,
-.academic-talks .academic-talk-card .links .btn:hover,
-.academic-talks .academic-talk-card .links .btn:focus-visible {
-  border-color: var(--academic-accent);
-  background: color-mix(in srgb, var(--academic-accent) 20%, var(--global-bg-color, #111820));
-  color: var(--global-text-color, #ecf0f4);
-  text-decoration: none;
-}
-.academic-publications .academic-bibliography .links .btn:focus-visible,
-.academic-talks .academic-talk-card .links .btn:focus-visible {
-  outline: 2px solid var(--academic-accent);
-  outline-offset: 3px;
-}
 /* Fill the unused right-hand columns while retaining the card's inner padding. */
 @media (min-width: 576px) {
   .academic-publications .academic-bibliography .bibliography > li > .row > .col-sm-8,
@@ -252,6 +266,65 @@ html { scrollbar-gutter: stable; }
 .academic-content .academic-lead, .academic-content .academic-section-heading { width: 100%; max-width: none; }
 @media (max-width: 720px) {
   .academic-news-card { grid-template-columns: 1fr; gap: .35rem; padding: .85rem; }
+}
+</style> <style>
+/* Shared resource badges for Publications, Talks, and CV selections. */
+.academic-publications .academic-bibliography.publications div.award.hidden {
+  border: none;
+}
+.academic-publications .academic-publication-note {
+  display: block;
+  margin-top: .25rem;
+  color: var(--global-text-color-light);
+  font-size: .8rem;
+  line-height: 1.6;
+}
+.academic-publications .academic-bibliography .links,
+.academic-talks .academic-talk-card .links,
+.cv .academic-cv-selected-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: .65rem;
+}
+.academic-publications .academic-bibliography .links .btn,
+.academic-talks .academic-talk-card .links .btn,
+.cv .academic-cv-selected-links .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.85rem;
+  margin: 0;
+  padding: .3rem .75rem;
+  border: 1px solid color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 35%, transparent);
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 10%, var(--global-bg-color, #111820));
+  color: var(--global-text-color, #ecf0f4);
+  font-size: .74rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: .02em;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.academic-publications .academic-bibliography .links .btn:hover,
+.academic-publications .academic-bibliography .links .btn:focus-visible,
+.academic-talks .academic-talk-card .links .btn:hover,
+.academic-talks .academic-talk-card .links .btn:focus-visible,
+.cv .academic-cv-selected-links .btn:hover,
+.cv .academic-cv-selected-links .btn:focus-visible {
+  border-color: var(--academic-accent, var(--academic-cv-accent));
+  background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 20%, var(--global-bg-color, #111820));
+  color: var(--global-text-color, #ecf0f4);
+  text-decoration: none;
+}
+.academic-publications .academic-bibliography .links .btn:focus-visible,
+.academic-talks .academic-talk-card .links .btn:focus-visible,
+.cv .academic-cv-selected-links .btn:focus-visible {
+  outline: 2px solid var(--academic-accent, var(--academic-cv-accent));
+  outline-offset: 3px;
 }
 </style> <div class="academic-content academic-activities"> <p class="academic-lead">Academic service, conference organization, and professional recognition.</p> <section class="academic-section" aria-labelledby="academic-service"> <div class="academic-section-heading"> <div> <p class="academic-eyebrow">PROFESSIONAL ACTIVITIES</p> <h2 id="academic-service">Academic Service</h2> </div> </div> <div class="academic-grid"> <article class="academic-card"> <p class="academic-eyebrow">01 / EDITORIAL</p> <h3>Editorial Board</h3> <p class="academic-card-title"><a href="https://tosc.iacr.org/" rel="external nofollow noopener" target="_blank">IACR Transactions on Symmetric Cryptology (ToSC)</a></p> <p class="academic-muted">Editorial Board member</p> <ul class="academic-tag-list" aria-label="Service terms"> <li>2025/2026</li> <li>2024/2025</li> <li>2023/2024</li> <li>2022/2023</li> </ul> </article> <article class="academic-card"> <p class="academic-eyebrow">02 / REVIEW</p> <h3>Program Committee</h3> <ul class="academic-simple-list"> <li><a href="https://fse.iacr.org/2026/" rel="external nofollow noopener" target="_blank">FSE 2026</a></li> <li><a href="https://fse.iacr.org/2025/" rel="external nofollow noopener" target="_blank">FSE 2025</a></li> <li>ISC 2024</li> <li>ACISP 2024</li> <li>ADSC 2024</li> <li>FSE 2024</li> <li>ADSC 2023</li> <li>FSE 2023</li> </ul> </article> <article class="academic-card"> <p class="academic-eyebrow">03 / ORGANIZATION</p> <h3>Conference Organization</h3> <ul class="academic-role-list"> <li> <strong>Publication Chair</strong><span>IWSEC 2024</span> </li> <li> <strong>Local Organizing Chair</strong><span>ACNS 2023, ACNS 2021</span> </li> <li> <strong>Publicity Chair</strong><span>ISPEC 2022</span> </li> </ul> </article> </div> </section> <section class="academic-section" aria-labelledby="awards"> <div class="academic-section-heading"> <div> <p class="academic-eyebrow">HONORS &amp; RECOGNITION</p> <h2 id="awards">Awards</h2> </div> </div> <ol class="academic-awards"> <li> <span class="academic-year">2026</span><span>SCIS Paper Award (SCIS 2025), ISEC group of IEICE, Japan</span> </li> <li> <span class="academic-year">2025</span><span>CSS Best Paper Award, IPSJ, Japan</span> </li> <li> <span class="academic-year">2025</span><span>SCIS Innovation Paper Award (SCIS 2024), ISEC group of IEICE, Japan</span> </li> <li> <span class="academic-year">2024</span><span>CSS Paper Award, IPSJ, Japan</span> </li> <li> <span class="academic-year">2024</span><span>CSS Ethical Practice Award, IPSJ, Japan</span> </li> <li> <span class="academic-year">2023</span><span>CSS Student Paper Award, IPSJ, Japan</span> </li> <li> <span class="academic-year">2023</span><span>JIP Specially Selected Paper Certificate, IPSJ, Japan</span> </li> <li> <span class="academic-year">2023</span><span>IPSJ Yamashita SIG Research Award, IPSJ, Japan</span> </li> <li> <span class="academic-year">2022</span><span>SCIS Innovation Paper Award (SCIS 2021), ISEC group of IEICE, Japan</span> </li> <li> <span class="academic-year">2021</span><span>CSS Encouragement Research Award (CSS 2021), CSEC group of IPSJ, Japan</span> </li> <li> <span class="academic-year">2016</span><span>SCIS Paper Award (SCIS 2015), ISEC group of IEICE, Japan</span> </li> <li> <span class="academic-year">2015</span><span>Best Student Award, Japan Advanced Institute of Science and Technology, Japan</span> </li> <li> <span class="academic-year">2009</span><span>Best Student Award, National Defense Academy, Japan</span> </li> </ol> </section> </div> </article> </div> </div> <script>
   window.alFolio = {

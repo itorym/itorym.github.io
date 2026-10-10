@@ -1,0 +1,562 @@
+<!DOCTYPE html> <html lang="ja"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> 略歴 | Ryoma Ito </title> <meta name="author" content="Ryoma Ito"> <meta name="description" content="Personal academic website of Ryoma Ito, a cryptography researcher at NICT. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.css" integrity="sha256-zTN0r+0OKaIv2xqeNNIYxNk0pWJ6+IqPGc1iDgVzWF0=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="stylesheet" href="/assets/css/al-folio-cv.css?v=734ded6bdb6d549b12085aded7cf1c5e"> <link rel="canonical" href="https://itorym.github.io/ja/cv/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> <link rel="alternate" hreflang="en" href="https://itorym.github.io/cv/"> <link rel="alternate" hreflang="x-default" href="https://itorym.github.io/cv/"> <link rel="alternate" hreflang="ja" href="https://itorym.github.io/ja/cv/"> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/ja/"> 伊藤 竜馬 </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="メニューを開閉"> <span class="sr-only">メニューを開閉</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/ja/">ホーム </a> </li> <li class="nav-item active"> <a class="nav-link" href="/ja/cv/">略歴 <span class="sr-only">（現在のページ）</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/ja/publications/">論文 </a> </li> <li class="nav-item "> <a class="nav-link" href="/ja/talks/">講演 </a> </li> <li class="nav-item language-switch-item"> <nav class="language-switch-options" aria-label="表示言語"> <a class="language-switch-option" href="/cv/" lang="en" hreflang="en" rel="alternate">English</a> <span class="language-switch-option is-current" lang="ja" aria-current="true">日本語</span> </nav> <style>
+    #navbar .language-switch-item {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-left: 0.75rem;
+      padding-left: 1rem;
+      border-left: 1px solid color-mix(in srgb, var(--global-text-color) 18%, transparent);
+    }
+    #navbar .language-switch-options {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.15rem;
+      padding: 0.2rem;
+      border: 1px solid color-mix(in srgb, var(--global-text-color) 22%, transparent);
+      border-radius: 99px;
+      background: var(--global-bg-color);
+    }
+    #navbar .language-switch-option {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 2rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 99px;
+      color: var(--global-text-color);
+      font-size: 0.8rem;
+      font-weight: 500;
+      line-height: 1.25;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    #navbar .language-switch-option.is-current {
+      background: color-mix(in srgb, var(--global-theme-color) 22%, var(--global-bg-color));
+      color: var(--global-theme-color);
+      font-weight: 700;
+      box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--global-theme-color) 30%, transparent);
+    }
+    #navbar a.language-switch-option:hover {
+      background: color-mix(in srgb, var(--global-text-color) 8%, var(--global-bg-color));
+      text-decoration: underline;
+    }
+    #navbar a.language-switch-option:focus-visible {
+      outline: 2px solid var(--global-theme-color);
+      outline-offset: 2px;
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      @media (max-width: 575.98px) {
+      #navbar .language-switch-item {
+        align-self: flex-start;
+        flex-wrap: wrap;
+        margin: 0.5rem 0 0;
+        padding: 0.85rem 0 0.5rem;
+        border-left: 0;
+        border-top: 1px solid color-mix(in srgb, var(--global-text-color) 18%, transparent);
+      }
+    }
+  </style> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="配色を変更" aria-label="配色を変更"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="row"> <div class="col-sm-3"> <nav id="toc-sidebar" class="sticky-top toc toc-sidebar" aria-label="目次" data-toc-collapse="expanded" data-toc-collapse-depth=""></nav> </div> <div class="col-sm-9"> <style>
+html { scrollbar-gutter: stable; }
+.container[role="main"] {
+  width: 100%;
+  max-width: 930px !important;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+.container[role="main"] > .post,
+.container[role="main"] > .post > article {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+</style> <style>
+  @media (max-width: 576px) {
+    #toc-sidebar {
+      visibility: visible;
+      height: auto;
+      position: static;
+      margin-bottom: 1.5rem;
+    }
+  }
+  .cv h3[id] {
+    scroll-margin-top: 90px;
+  }
+
+  /* Common CV design */
+  .cv {
+    --academic-cv-accent: var(--global-theme-color, #87b8cb);
+    --academic-cv-text: var(--global-text-color, #dce4ec);
+    --academic-cv-bg: var(--global-bg-color, #111820);
+    --academic-cv-border: color-mix(in srgb, var(--academic-cv-text) 16%, transparent);
+    --academic-cv-surface: color-mix(in srgb, var(--academic-cv-bg) 88%, var(--academic-cv-text) 12%);
+    --academic-cv-hover: color-mix(in srgb, var(--academic-cv-accent) 45%, transparent);
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .cv,
+  .cv * {
+    box-sizing: border-box;
+  }
+
+  /* Timeline entries are groups, with no outer list markers. */
+  .cv ul.list-group,
+  .cv ul.list-group > li.list-group-item {
+    list-style: none;
+  }
+
+  /* Keep all outer section cards intact, with consistent headings. */
+  .cv > .card,
+  .cv > a.anchor + .card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.2rem 1.3rem;
+    background: transparent;
+    border: 1px solid var(--academic-cv-border);
+    border-radius: 0.85rem;
+    box-shadow: none;
+    color: var(--academic-cv-text);
+  }
+  .cv > .card > .card-title,
+  .cv > a.anchor + .card > .card-title {
+    margin: 0 0 1.05rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--academic-cv-border);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.012em;
+    color: var(--academic-cv-text);
+  }
+
+  /* Generic RenderCV bullet sections: one UL is generated per bullet. */
+  .cv > a.anchor:is(#academic-service, #honors-awards, #selected-publications, #selected-talks) + .card > div > ul.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    min-width: 0;
+  }
+  .cv > a.anchor:is(#academic-service, #honors-awards, #selected-publications, #selected-talks) + .card .list-group-item p {
+    margin: 0;
+  }
+
+  /* Academic Service: one full-width column, no nested cards. */
+  .cv > a#academic-service + .card > div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .cv > a#academic-service + .card > div > ul.list-group + ul.list-group {
+    border-top: 1px solid var(--academic-cv-border);
+  }
+  .cv > a#academic-service + .card > div > ul.list-group > li.list-group-item,
+  .cv > a#academic-service + .card > div > .card-text {
+    display: block;
+    margin: 0;
+    padding: 0.9rem 1rem;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--academic-cv-text);
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+  }
+  .cv > a#academic-service + .card > div > ul.list-group > li.list-group-item strong,
+  .cv > a#academic-service + .card > div > .card-text strong {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--academic-cv-accent);
+    font-weight: 650;
+  }
+
+  /* Awards: Education-like timeline without inner boxes.
+   The renderer produces: <li><strong>2026:</strong> Award title...</li>
+   Avoid CSS Grid on that <li>, because its text is not a wrapped element.
+   Use a floated year in the left gutter; the remaining text occupies the
+   full right-hand content column and wraps normally. */
+  .cv > a#honors-awards + .card > div > ul.list-group {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+  .cv > a#honors-awards + .card > div > ul.list-group + ul.list-group {
+    border-top: 1px solid var(--academic-cv-border);
+  }
+  .cv > a#honors-awards + .card > div > ul.list-group > li.list-group-item,
+  .cv > a#honors-awards + .card > div > .card-text {
+    display: flow-root;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0.85rem 1rem 0.85rem 8.35rem;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--academic-cv-text);
+    line-height: 1.6;
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
+  .cv > a#honors-awards + .card > div > ul.list-group > li.list-group-item > strong:first-child,
+  .cv > a#honors-awards + .card > div > .card-text > strong:first-child {
+    float: left;
+    display: inline-block;
+    width: auto;
+    max-width: 6.8rem;
+    margin-left: -7.35rem;
+    padding: 0.12rem 0.35rem;
+    color: var(--academic-cv-accent);
+    background: color-mix(in srgb, var(--academic-cv-accent) 15%, transparent);
+    border-radius: 0.2rem;
+    font-size: 0.85rem;
+    font-weight: 650;
+    line-height: 1.4;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+
+  /* Selected results use the same date/content columns as the CV timelines. */
+  .cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > ul.list-group > li.list-group-item {
+    padding: 0.85rem 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .cv .academic-cv-selected .bibliography {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .cv .academic-cv-selected .bibliography > li {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .cv .academic-cv-selected .academic-cv-selected-entry {
+    padding: 0 0 0.85rem;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .cv .academic-cv-selected .bibliography + .bibliography .academic-cv-selected-entry,
+  .cv .academic-cv-selected-entry + .academic-cv-selected-entry {
+    padding-top: 0.85rem;
+  }
+  /* Match the native Education list indentation and Bootstrap columns. */
+  @media (min-width: 576px) {
+    .cv .academic-cv-selected {
+      padding-left: 40px;
+    }
+  }
+  .cv .academic-cv-selected-info {
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+  .cv .academic-cv-selected-info .title {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.35rem;
+  }
+  .cv .academic-cv-selected-info p {
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+  }
+  .cv .academic-cv-selected-authors,
+  .cv .academic-cv-selected-meta {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  .cv .academic-cv-selected a {
+    color: var(--academic-cv-accent);
+    text-underline-offset: 0.18rem;
+  }
+  .cv .academic-cv-selected a:focus-visible {
+    outline: 2px solid var(--academic-cv-accent);
+    outline-offset: 3px;
+  }
+  .cv .academic-cv-selected-footer {
+    padding-top: 0.9rem;
+    border-top: 1px solid var(--academic-cv-border);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .cv .academic-cv-selected-footer p {
+    margin: 0;
+  }
+  @media (max-width: 575.98px) {
+    .cv .academic-cv-selected-info :is(p, .academic-cv-selected-links) {
+      margin-left: 0;
+    }
+  }
+
+  /* Teaching Experience: reuse the official Education include,
+   keep its normal padding and strip *only* nested borders/backgrounds. */
+  .cv > a.anchor#lectures + .card > div:not(.academic-teaching-education) {
+    display: none;
+  }
+  .cv > a.anchor#lectures + .card > .academic-teaching-education {
+    width: 100%;
+    max-width: 100%;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+  .cv
+    > a.anchor#lectures
+    + .card
+    .academic-teaching-education
+    :is(.row, .card, .card-body, .card-text, .list-group, .list-group-item, .academic-teaching-entry) {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Keep the older custom teaching-entry selectors harmless if present. */
+  .cv .academic-teaching-entry {
+    display: grid;
+    grid-template-columns: minmax(7rem, 20%) minmax(0, 1fr);
+    align-items: start;
+    column-gap: 1.35rem;
+    row-gap: 0.35rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--academic-cv-border);
+  }
+  .cv .academic-teaching-entry:first-child {
+    padding-top: 0.25rem;
+  }
+  .cv .academic-teaching-entry:last-child {
+    border-bottom: 0;
+    padding-bottom: 0.2rem;
+  }
+  .cv .academic-teaching-dates {
+    color: var(--academic-cv-accent);
+    font-size: 0.9rem;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.6;
+  }
+  .cv .academic-teaching-info {
+    min-width: 0;
+    line-height: 1.55;
+  }
+  .cv .academic-teaching-degree {
+    color: var(--academic-cv-text);
+    font-weight: 650;
+    font-size: 1rem;
+  }
+  .cv .academic-teaching-institution {
+    font-weight: 550;
+    margin-top: 0.12rem;
+  }
+  .cv .academic-teaching-area,
+  .cv .academic-teaching-location {
+    opacity: 0.78;
+    font-size: 0.91rem;
+    margin-top: 0.12rem;
+  }
+
+  @media (max-width: 680px) {
+    .cv > .card,
+    .cv > a.anchor + .card {
+      padding: 0.95rem;
+    }
+    .cv > a#honors-awards + .card > div > ul.list-group > li.list-group-item,
+    .cv > a#honors-awards + .card > div > .card-text {
+      padding: 0.8rem 0.55rem 0.8rem 6.05rem;
+    }
+    .cv > a#honors-awards + .card > div > ul.list-group > li.list-group-item > strong:first-child,
+    .cv > a#honors-awards + .card > div > .card-text > strong:first-child {
+      margin-left: -5.5rem;
+    }
+    .cv > a#academic-service + .card > div > ul.list-group > li.list-group-item,
+    .cv > a#academic-service + .card > div > .card-text {
+      padding: 0.8rem 0.55rem;
+    }
+    .cv .academic-teaching-entry {
+      grid-template-columns: 1fr;
+      row-gap: 0.25rem;
+    }
+  }
+  /* Stack each timeline entry as a single group on phones. Remove the
+   desktop date offset and table/paragraph margins before spacing rows. */
+  @media (max-width: 575.98px) {
+    .cv ul.list-group {
+      padding-left: 0;
+    }
+    .cv .list-group-item:has(> .row > .date-column) {
+      padding: 0.85rem 0;
+    }
+    .cv .list-group-item:has(> .row > .date-column) + .list-group-item {
+      margin-top: 0.5rem;
+    }
+    .cv .list-group-item > .row:has(> .date-column) {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.35rem;
+      margin: 0;
+    }
+    .cv .list-group-item > .row > .date-column,
+    .cv .list-group-item > .row > .date-column + div {
+      width: 100%;
+      max-width: 100%;
+      min-width: 0;
+      padding: 0;
+      margin: 0;
+    }
+    .cv .list-group-item > .row > .date-column {
+      transform: none;
+      text-align: left;
+    }
+    @layer utilities {
+      .cv .list-group-item > .row > .date-column + div {
+        margin-top: 0 !important; /* Override the renderer's mt-2 utility in its layer. */
+      }
+    }
+    .cv .date-column .table-cv {
+      margin: 0;
+    }
+    .cv .date-column .location {
+      margin: 0.2rem 0 0;
+    }
+    .cv .list-group-item > .row > .date-column + div > h6 {
+      margin-left: 0 !important; /* Align with the date instead of ml-1. */
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > ul.list-group > li.list-group-item,
+    .cv > a.anchor:is(#selected-publications, #selected-talks) + .card > div > .card-text {
+      transition: none;
+    }
+  }
+</style> <style>
+/* Shared resource badges for Publications, Talks, and CV selections. */
+.academic-publications .academic-bibliography.publications div.award.hidden {
+  border: none;
+}
+.academic-publications .academic-publication-note {
+  display: block;
+  margin-top: .25rem;
+  color: var(--global-text-color-light);
+  font-size: .8rem;
+  line-height: 1.6;
+}
+.academic-publications .academic-bibliography .links,
+.academic-talks .academic-talk-card .links,
+.cv .academic-cv-selected-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin-top: .65rem;
+}
+.academic-publications .academic-bibliography .links .btn,
+.academic-talks .academic-talk-card .links .btn,
+.cv .academic-cv-selected-links .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.85rem;
+  margin: 0;
+  padding: .3rem .75rem;
+  border: 1px solid color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 35%, transparent);
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 10%, var(--global-bg-color, #111820));
+  color: var(--global-text-color, #ecf0f4);
+  font-size: .74rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: .02em;
+  text-decoration: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.academic-publications .academic-bibliography .links .btn:hover,
+.academic-publications .academic-bibliography .links .btn:focus-visible,
+.academic-talks .academic-talk-card .links .btn:hover,
+.academic-talks .academic-talk-card .links .btn:focus-visible,
+.cv .academic-cv-selected-links .btn:hover,
+.cv .academic-cv-selected-links .btn:focus-visible {
+  border-color: var(--academic-accent, var(--academic-cv-accent));
+  background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 20%, var(--global-bg-color, #111820));
+  color: var(--global-text-color, #ecf0f4);
+  text-decoration: none;
+}
+.academic-publications .academic-bibliography .links .btn:focus-visible,
+.academic-talks .academic-talk-card .links .btn:focus-visible,
+.cv .academic-cv-selected-links .btn:focus-visible {
+  outline: 2px solid var(--academic-accent, var(--academic-cv-accent));
+  outline-offset: 3px;
+}
+</style> <style>
+/* Legacy fallback selectors; the new section has no generic bullet output. */
+.cv > a.anchor#academic-service + .card > .academic-service-timeline ~ div,
+.cv > a.anchor#academic-service + .card > .academic-service-timeline ~ ul.list-group {
+  display: none !important;
+}
+
+/* Let the Education renderer determine each row's appearance. */
+.cv > a.anchor#academic-service + .card > .academic-service-timeline {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+/* Category labels live OUTSIDE the Education lists. */
+.cv .academic-service-group-title {
+  margin: 0 0 .85rem;
+  padding: 0;
+  font-size: .95rem;
+  font-weight: 650;
+  line-height: 1.4;
+  color: var(--global-theme-color, #2caccb);
+}
+.cv .academic-service-group + .academic-service-group {
+  margin-top: 1.1rem;
+  padding-top: 1rem;
+  border-top: 1px solid color-mix(in srgb, var(--global-text-color, #dce4ec) 16%, transparent);
+}
+
+/* Avoid unnecessary extra bottom whitespace between groups. */
+.cv .academic-service-group > ul.card-text,
+.cv .academic-service-group > ul.list-group {
+  margin-bottom: 0;
+}
+
+/* Location is intentionally absent from the data, and never shown here. */
+.cv .academic-service-timeline .location {
+  display: none !important;
+}
+</style> <div class="post"> <header class="post-header"> <h1 class="post-title"> 略歴 <a href="/assets/pdf/CV_Ja.pdf" target="_blank" rel="noopener noreferrer" class="float-right" aria-label="略歴PDFを開く" title="略歴PDFを開く"> <i class="fa-solid fa-file-pdf"></i> </a> </h1> </header> <article> <div class="cv"> <div class="card mt-3 p-3"> <h3 class="card-title font-weight-medium" id="cv-contact-information">基本情報</h3> <table class="table table-cv table-sm table-borderless"> <tr> <td class="p-1 pr-2 font-weight-bold"> <b>氏名</b> </td> <td class="p-1 pl-2 font-weight-light">伊藤 竜馬（いとう りょうま）</td> </tr> <tr> <td class="p-1 pr-2 font-weight-bold"> <b>役職</b> </td> <td class="p-1 pl-2 font-weight-light">プランニングマネージャー・研究マネージャー</td> </tr> <tr> <td class="p-1 pr-2 font-weight-bold"> <b>メール</b> </td> <td class="p-1 pl-2 font-weight-light">itorym [at] nict.go.jp</td> </tr> <tr> <td class="p-1 pr-2 font-weight-bold"> <b>ウェブサイト</b> </td> <td class="p-1 pl-2 font-weight-light"> <a href="https://itorym.github.io/" target="_blank">https://itorym.github.io/</a> </td> </tr> </table> </div> <a class="anchor" id="experience"></a> <div class="card mt-3 p-3"> <h3 class="card-title font-weight-medium" id="cv-experience">職歴</h3> <div> <ul class="card-text font-weight-light list-group list-group-flush"> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2026 - present</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> プランニングマネージャー </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem"> 国立研究開発法人情報通信研究機構<br>経営企画部 企画戦略室 </h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2026 - present</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 研究マネージャー </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem"> 国立研究開発法人情報通信研究機構<br>サイバーセキュリティ研究所 セキュリティ基盤研究室 </h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025 - present</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 招へい准教授 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem"> 大阪大学大学院 情報科学研究科 </h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025 - present</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 非常勤講師 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem"> 東邦大学 理学部 情報科学科 </h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2020 - 2026</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 主任研究員 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem"> 国立研究開発法人情報通信研究機構<br>サイバーセキュリティ研究所 セキュリティ基盤研究室 </h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2009 - 2020</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 情報通信幹部 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem"> 防衛省 航空自衛隊 </h6> </div> </div> </li> </ul> </div> </div> <a class="anchor" id="education"></a> <div class="card mt-3 p-3"> <h3 class="card-title font-weight-medium" id="cv-education">学歴</h3> <div> <ul class="card-text font-weight-light list-group list-group-flush"> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2017 - 2019</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 博士（工学） </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">大阪大学大学院 工学研究科</h6> <ul class="items"> <li> <span class="item">指導教員：宮地充子 教授 </span> </li> <li> <span class="item">博士論文：<a href="https://ir.library.osaka-u.ac.jp/repo/ouka/all/73465/30703_Dissertation.pdf" rel="external nofollow noopener" target="_blank">A Study on Statistical Cryptanalysis of Stream Ciphers</a> </span> </li> </ul> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2013 - 2015</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 修士（情報科学） </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">北陸先端科学技術大学院大学 情報科学研究科</h6> <ul class="items"> <li> <span class="item">指導教員：宮地充子 教授 </span> </li> </ul> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2005 - 2009</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 学士（理工学） </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">防衛大学校 理工学部 電気電子工学科</h6> </div> </div> </li> </ul> </div> </div> <a class="anchor" id="selected-publications"></a> <div class="card mt-3 p-3"> <h3 class="card-title font-weight-medium" id="cv-selected-publications">主要論文</h3> <div> <div class="academic-cv-selected"> <ol class="bibliography"><li> <div class="academic-cv-selected-entry list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody><tr><td><span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2026</span></td></tr></tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0 academic-cv-selected-info" id="cv-DBLP:conf/asiacrypt/IshikawaISSII26"> <h6 class="title font-weight-bold ml-1 ml-md-4">Finding Collision for HMAC-SHA Forgery in the Secret-State Setting</h6> <p class="academic-cv-selected-authors ml-1 ml-md-4">Tatsuya Ishikawa, Takanori Isobe, <strong>Ryoma Ito</strong>, Kosei Sakamoto, Kosuke Sasaki, Kazuma Taka, and Shion Utsumi</p> <p class="ml-1 ml-md-4">Advances in Cryptology - ASIACRYPT 2026 - 32th International Conference on the Theory and Application of Cryptology and Information Security (to appear)</p> <p class="academic-cv-selected-meta ml-1 ml-md-4"> Springer </p> <div class="academic-cv-selected-links ml-1 ml-md-4"> </div> </div> </div> </div> </li></ol> <ol class="bibliography"><li> <div class="academic-cv-selected-entry list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody><tr><td><span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025</span></td></tr></tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0 academic-cv-selected-info" id="cv-DBLP:journals/tosc/TakaSISUI25"> <h6 class="title font-weight-bold ml-1 ml-md-4">Divide-and-Conquer SAT for Exploring Optimal Differential and Linear Characteristics and Its Applications</h6> <p class="academic-cv-selected-authors ml-1 ml-md-4">Kazuma Taka, Kosei Sakamoto, <strong>Ryoma Ito</strong>, Rentaro Shiba, Shion Utsumi, and Takanori Isobe</p> <p class="ml-1 ml-md-4">IACR Trans. Symmetric Cryptol.</p> <p class="academic-cv-selected-meta ml-1 ml-md-4"> Vol. 2025 , no. 3 , pp. 516–576 </p> <div class="academic-cv-selected-links ml-1 ml-md-4"> <a class="btn btn-sm z-depth-0" href="https://doi.org/10.46586/TOSC.V2025.I3.516-576" rel="external nofollow noopener" target="_blank">DOI</a> <a class="btn btn-sm z-depth-0" href="https://github.com/cpsykazuma/tosc2025_3" rel="external nofollow noopener" target="_blank">Code</a> </div> </div> </div> </div> </li></ol> <ol class="bibliography"><li> <div class="academic-cv-selected-entry list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody><tr><td><span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025</span></td></tr></tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0 academic-cv-selected-info" id="cv-DBLP:journals/tosc/BanikIIIMNRS25"> <h6 class="title font-weight-bold ml-1 ml-md-4">Dialga: A Family of Low-Latency Tweakable Block Ciphers Using Multiple Linear Layers</h6> <p class="academic-cv-selected-authors ml-1 ml-md-4">Subhadeep Banik, Tatsuya Ishikawa, Takanori Isobe, <strong>Ryoma Ito</strong>, Kazuhiko Minematsu, Kazuma Nakata, Mostafizar Rahman, and Kosei Sakamoto</p> <p class="ml-1 ml-md-4">IACR Trans. Symmetric Cryptol.</p> <p class="academic-cv-selected-meta ml-1 ml-md-4"> Vol. 2025 , no. 4 , pp. 70–124 </p> <div class="academic-cv-selected-links ml-1 ml-md-4"> <a class="btn btn-sm z-depth-0" href="https://doi.org/10.46586/TOSC.V2025.I4.70-124" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </div> </li></ol> <ol class="bibliography"><li> <div class="academic-cv-selected-entry list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody><tr><td><span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025</span></td></tr></tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0 academic-cv-selected-info" id="cv-DBLP:conf/acsac/KimuraIMI25"> <h6 class="title font-weight-bold ml-1 ml-md-4">Gravity of the Situation: Security Analysis on Rocket.Chat E2EE</h6> <p class="academic-cv-selected-authors ml-1 ml-md-4">Hayato Kimura, <strong>Ryoma Ito</strong>, Kazuhiko Minematsu, and Takanori Isobe</p> <p class="ml-1 ml-md-4">IEEE Annual Computer Security Applications Conference, ACSAC 2025, Honolulu, HI, USA, December 8-12, 2025</p> <p class="academic-cv-selected-meta ml-1 ml-md-4"> pp. 15–30 · IEEE </p> <div class="academic-cv-selected-links ml-1 ml-md-4"> <a class="btn btn-sm z-depth-0" href="https://doi.org/10.1109/ACSAC67867.2025.00018" rel="external nofollow noopener" target="_blank">DOI</a> <a class="btn btn-sm z-depth-0" href="https://github.com/gravity-of-the-situation-rc/Artifacts-of-Security-Analysis-on-RocketChat-E2EE" rel="external nofollow noopener" target="_blank">Code</a> <a class="btn btn-sm z-depth-0" href="https://gravity-of-the-situation-rc.github.io/" rel="external nofollow noopener" target="_blank">Website</a> </div> </div> </div> </div> </li></ol> <ol class="bibliography"><li> <div class="academic-cv-selected-entry list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody><tr><td><span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025</span></td></tr></tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0 academic-cv-selected-info" id="cv-DBLP:conf/eurosp/KimuraIMSI25"> <h6 class="title font-weight-bold ml-1 ml-md-4">Not in The Prophecies: Practical Attacks on Nostr</h6> <p class="academic-cv-selected-authors ml-1 ml-md-4">Hayato Kimura, <strong>Ryoma Ito</strong>, Kazuhiko Minematsu, Shogo Shiraki, and Takanori Isobe</p> <p class="ml-1 ml-md-4">10th IEEE European Symposium on Security and Privacy, EuroS&amp;P 2025, Venice, Italy, June 30 - July 4, 2025</p> <p class="academic-cv-selected-meta ml-1 ml-md-4"> pp. 585–606 · IEEE </p> <div class="academic-cv-selected-links ml-1 ml-md-4"> <a class="btn btn-sm z-depth-0" href="https://doi.org/10.1109/EUROSP63326.2025.00040" rel="external nofollow noopener" target="_blank">DOI</a> <a class="btn btn-sm z-depth-0" href="https://github.com/crypto-sec-n/Artifacts" rel="external nofollow noopener" target="_blank">Code</a> <a class="btn btn-sm z-depth-0" href="https://crypto-sec-n.github.io/" rel="external nofollow noopener" target="_blank">Website</a> </div> </div> </div> </div> </li></ol> <ol class="bibliography"><li> <div class="academic-cv-selected-entry list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody><tr><td><span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2024</span></td></tr></tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0 academic-cv-selected-info" id="cv-DBLP:conf/asiacrypt/TaiyamaSITI24"> <h6 class="title font-weight-bold ml-1 ml-md-4">Key Collisions on AES and Its Applications</h6> <p class="academic-cv-selected-authors ml-1 ml-md-4">Kodai Taiyama, Kosei Sakamoto, <strong>Ryoma Ito</strong>, Kazuma Taka, and Takanori Isobe</p> <p class="ml-1 ml-md-4">Advances in Cryptology - ASIACRYPT 2024 - 30th International Conference on the Theory and Application of Cryptology and Information Security, Kolkata, India, December 9-13, 2024, Proceedings, Part VII</p> <p class="academic-cv-selected-meta ml-1 ml-md-4"> Vol. 15490 , pp. 267–300 · Springer </p> <div class="academic-cv-selected-links ml-1 ml-md-4"> <a class="btn btn-sm z-depth-0" href="https://doi.org/10.1007/978-981-96-0941-3_9" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </div> </li></ol> <ol class="bibliography"><li> <div class="academic-cv-selected-entry list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody><tr><td><span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2023</span></td></tr></tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0 academic-cv-selected-info" id="cv-DBLP:journals/tches/IsobeILMNSS23"> <h6 class="title font-weight-bold ml-1 ml-md-4">Areion: Highly-Efficient Permutations and Its Applications to Hash Functions for Short Input</h6> <p class="academic-cv-selected-authors ml-1 ml-md-4">Takanori Isobe, <strong>Ryoma Ito</strong>, Fukang Liu, Kazuhiko Minematsu, Motoki Nakahashi, Kosei Sakamoto, and Rentaro Shiba</p> <p class="ml-1 ml-md-4">IACR Trans. Cryptogr. Hardw. Embed. Syst.</p> <p class="academic-cv-selected-meta ml-1 ml-md-4"> Vol. 2023 , no. 2 , pp. 115–154 </p> <div class="academic-cv-selected-links ml-1 ml-md-4"> <a class="btn btn-sm z-depth-0" href="https://doi.org/10.46586/TCHES.V2023.I2.115-154" rel="external nofollow noopener" target="_blank">DOI</a> <a class="btn btn-sm z-depth-0" href="https://github.com/gmo-ierae/low-latency-crypto-areion" rel="external nofollow noopener" target="_blank">Code</a> </div> </div> </div> </div> </li></ol> <ol class="bibliography"><li> <div class="academic-cv-selected-entry list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody><tr><td><span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2023</span></td></tr></tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0 academic-cv-selected-info" id="cv-DBLP:journals/tosc/ChenFIIIMMNST23"> <h6 class="title font-weight-bold ml-1 ml-md-4">Key Committing Security of AEZ and More</h6> <p class="academic-cv-selected-authors ml-1 ml-md-4">Yu Long Chen, Antonio Flórez-Gutiérrez, Akiko Inoue, <strong>Ryoma Ito</strong>, Tetsu Iwata, Kazuhiko Minematsu, Nicky Mouha, Yusuke Naito, Ferdinand Sibleyras, and Yosuke Todo</p> <p class="ml-1 ml-md-4">IACR Trans. Symmetric Cryptol.</p> <p class="academic-cv-selected-meta ml-1 ml-md-4"> Vol. 2023 , no. 4 , pp. 452–488 </p> <div class="academic-cv-selected-links ml-1 ml-md-4"> <a class="btn btn-sm z-depth-0" href="https://doi.org/10.46586/TOSC.V2023.I4.452-488" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </div> </li></ol> <ol class="bibliography"><li> <div class="academic-cv-selected-entry list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody><tr><td><span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2022</span></td></tr></tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0 academic-cv-selected-info" id="cv-DBLP:journals/tosc/HosoyamadaIIIMS22"> <h6 class="title font-weight-bold ml-1 ml-md-4">Cryptanalysis of Rocca and Feasibility of Its Security Claim</h6> <p class="academic-cv-selected-authors ml-1 ml-md-4">Akinori Hosoyamada, Akiko Inoue, <strong>Ryoma Ito</strong>, Tetsu Iwata, Kazuhiko Minematsu, Ferdinand Sibleyras, and Yosuke Todo</p> <p class="ml-1 ml-md-4">IACR Trans. Symmetric Cryptol.</p> <p class="academic-cv-selected-meta ml-1 ml-md-4"> Vol. 2022 , no. 3 , pp. 123–151 </p> <div class="academic-cv-selected-links ml-1 ml-md-4"> <a class="btn btn-sm z-depth-0" href="https://doi.org/10.46586/TOSC.V2022.I3.123-151" rel="external nofollow noopener" target="_blank">DOI</a> <a class="btn btn-sm z-depth-0" href="https://github.com/Sibleyras/KeyRecoveryNonceMisusedRocca" rel="external nofollow noopener" target="_blank">Code</a> </div> </div> </div> </div> </li></ol> <ol class="bibliography"><li> <div class="academic-cv-selected-entry list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody><tr><td><span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2022</span></td></tr></tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0 academic-cv-selected-info" id="cv-DBLP:journals/tosc/LiuMSWII22"> <h6 class="title font-weight-bold ml-1 ml-md-4">New Cryptanalysis of ZUC-256 Initialization Using Modular Differences</h6> <p class="academic-cv-selected-authors ml-1 ml-md-4">Fukang Liu, Willi Meier, Santanu Sarkar, Gaoli Wang, <strong>Ryoma Ito</strong>, and Takanori Isobe</p> <p class="ml-1 ml-md-4">IACR Trans. Symmetric Cryptol.</p> <p class="academic-cv-selected-meta ml-1 ml-md-4"> Vol. 2022 , no. 3 , pp. 152–190 </p> <div class="academic-cv-selected-links ml-1 ml-md-4"> <a class="btn btn-sm z-depth-0" href="https://doi.org/10.46586/TOSC.V2022.I3.152-190" rel="external nofollow noopener" target="_blank">DOI</a> <a class="btn btn-sm z-depth-0" href="https://github.com/LFKOKAMI/zuc-256" rel="external nofollow noopener" target="_blank">Code</a> </div> </div> </div> </div> </li></ol> <div class="academic-cv-selected-footer"> <p>その他の論文は、<a href="../publications/">論文一覧</a>をご覧ください。</p> </div> </div> </div> </div> <a class="anchor" id="selected-talks"></a> <div class="card mt-3 p-3"> <h3 class="card-title font-weight-medium" id="cv-selected-talks">主要講演</h3> <div> <div class="academic-cv-selected"> <div class="academic-cv-selected-entry list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody><tr><td><span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2026</span></td></tr></tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0 academic-cv-selected-info"> <h6 class="title font-weight-bold ml-1 ml-md-4">Payload Compromised: Full Key Recovery in Rocket.Chat E2EE</h6> <p class="academic-cv-selected-authors ml-1 ml-md-4">Hayato Kimura, Ryoma Ito, Kazuhiko Minematsu, and Takanori Isobe</p> <p class="ml-1 ml-md-4">Black Hat Asia 2026 Briefings</p> <p class="academic-cv-selected-meta ml-1 ml-md-4"> <time datetime="2026-04-23">2026年4月23日</time> <span> · 登壇者: Hayato Kimura</span> </p> <div class="academic-cv-selected-links ml-1 ml-md-4"> <a class="btn btn-sm z-depth-0" href="https://blackhat.com/asia-26/briefings/schedule/#payload-compromised-full-key-recovery-in-rocketchat-e2ee-50105" rel="external nofollow noopener" target="_blank">イベント</a> <a class="btn btn-sm z-depth-0" href="https://i.blackhat.com/Asia-26/Presentations/BHAS26-Kimura-Payload-Compromised.pdf" rel="external nofollow noopener" target="_blank">スライド</a> </div> </div> </div> </div> <div class="academic-cv-selected-entry list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody><tr><td><span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025</span></td></tr></tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0 academic-cv-selected-info"> <h6 class="title font-weight-bold ml-1 ml-md-4">Not Sealed: Practical Attacks on Nostr, a Decentralized Censorship-Resistant Protocol</h6> <p class="academic-cv-selected-authors ml-1 ml-md-4">Hayato Kimura, Ryoma Ito, Kazuhiko Minematsu, Shogo Shiraki, and Takanori Isobe</p> <p class="ml-1 ml-md-4">Black Hat USA 2025 Briefings</p> <p class="academic-cv-selected-meta ml-1 ml-md-4"> <time datetime="2025-08-06">2025年8月6日</time> <span> · 登壇者: Hayato Kimura</span> </p> <p class="academic-cv-selected-meta ml-1 ml-md-4">採択率：8.2%（93/1,143）。</p> <div class="academic-cv-selected-links ml-1 ml-md-4"> <a class="btn btn-sm z-depth-0" href="https://www.blackhat.com/us-25/briefings/schedule/index.html#not-sealed-practical-attacks-on-nostr-a-decentralized-censorship-resistant-protocol-45726" rel="external nofollow noopener" target="_blank">イベント</a> <a class="btn btn-sm z-depth-0" href="https://i.blackhat.com/BH-USA-25/Presentations/USA-25-Kimura-Not-Sealed-Practical-Attacks-on-Nostr.pdf" rel="external nofollow noopener" target="_blank">スライド</a> </div> </div> </div> </div> <div class="academic-cv-selected-footer"> <p>その他の講演は、<a href="../talks/">講演一覧</a>をご覧ください。</p> </div> </div> </div> </div> <a class="anchor" id="awards"></a> <div class="card mt-3 p-3"> <h3 class="card-title font-weight-medium" id="cv-awards">受賞</h3> <div> <ul class="card-text font-weight-light list-group list-group-flush"> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2026</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://icss.ieice.org/award.html" rel="external nofollow noopener" target="_blank"> ICSS研究賞 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">電子情報通信学会 情報システムセキュリティ研究会</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">2026年3月研究会</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2026</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.ieice.org/~isec/award-SCIS.html" rel="external nofollow noopener" target="_blank"> SCIS論文賞 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">電子情報通信学会 情報セキュリティ研究会</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">SCIS 2025</h6> <ul class="items"> <li> <span class="item">主著者である木村さんが受賞 </span> </li> </ul> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.iwsec.org/css/2025/award.html" rel="external nofollow noopener" target="_blank"> CSS最優秀論文賞 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">情報処理学会</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">CSS 2025</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.ieice.org/~isec/award-encouragement.html" rel="external nofollow noopener" target="_blank"> 情報セキュリティ研究奨励賞 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">電子情報通信学会 情報セキュリティ研究会</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">2025年7月研究会</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.ieice.org/~isec/award-SCIS.html" rel="external nofollow noopener" target="_blank"> SCISイノベーション論文賞 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">電子情報通信学会 情報セキュリティ研究会</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">SCIS 2024</h6> <ul class="items"> <li> <span class="item">受賞率：0.29% = 1/345 </span> </li> </ul> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2024</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.iwsec.org/css/2024/award.html" rel="external nofollow noopener" target="_blank"> CSS優秀論文賞 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">情報処理学会</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">CSS 2024</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2024</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.iwsec.org/css/2024/award.html" rel="external nofollow noopener" target="_blank"> CSSエシカルプラクティス賞 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">情報処理学会</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">CSS 2024</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2024</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 令和6年度NICT成績優秀者表彰（優秀賞・団体） </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">国立研究開発法人情報通信研究機構</h6> <ul class="items"> <li> <span class="item">受賞対象：CRYPTRECチーム </span> </li> </ul> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2024</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.iwsec.org/css/2023/award.html" rel="external nofollow noopener" target="_blank"> CSS学生論文賞 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">情報処理学会</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">CSS 2023</h6> <ul class="items"> <li> <span class="item">主著者である木村さんが受賞 </span> </li> </ul> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2024</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 令和5年度NICT成績優秀者表彰（優秀賞・団体） </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">国立研究開発法人情報通信研究機構</h6> <ul class="items"> <li> <span class="item">受賞対象：CRYPTRECチーム </span> </li> </ul> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2024</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.nict.go.jp/info/topics/2021/07/29-1.html" rel="external nofollow noopener" target="_blank"> 令和3年度NICT成績優秀者表彰（優秀賞・個人） </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">国立研究開発法人情報通信研究機構</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2023</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.ipsj.or.jp/english/organization/aboutipsj/award/ssp_award.html" rel="external nofollow noopener" target="_blank"> JIP Specially Selected Paper Certificate </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">情報処理学会</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2023</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.ipsj.or.jp/award/yamashita2022.html" rel="external nofollow noopener" target="_blank"> 山下記念研究賞 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">情報処理学会</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2022</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.ieice.org/~isec/award-SCIS.html" rel="external nofollow noopener" target="_blank"> SCISイノベーション論文賞 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">電子情報通信学会 情報セキュリティ研究会</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">SCIS 2021</h6> <ul class="items"> <li> <span class="item">受賞率：0.72% = 2/277 </span> </li> </ul> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2021</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.iwsec.org/css/2021/award.html" rel="external nofollow noopener" target="_blank"> CSS奨励賞 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">情報処理学会 コンピュータセキュリティ研究会</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">CSS 2021</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2016</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.ieice.org/~isec/award-SCIS.html" rel="external nofollow noopener" target="_blank"> SCIS論文賞 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">電子情報通信学会 情報セキュリティ研究会</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">SCIS 2015</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2015</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://cy2sec.comm.eng.osaka-u.ac.jp/miyaji-lab/activity/award_photo/ito.pdf" rel="external nofollow noopener" target="_blank"> 優秀修了 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">北陸先端科学技術大学院大学</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2009</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 優秀学生賞 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">防衛大学校</h6> </div> </div> </li> </ul> </div> </div> <a class="anchor" id="academic-service"></a> <div class="card mt-3 p-3"> <h3 class="card-title font-weight-medium" id="cv-academic-service">学会活動</h3> <section class="academic-service-timeline" aria-label="学会活動"> <div class="academic-service-group"> <h4 class="academic-service-group-title">国際論文誌・国際会議</h4> <ul class="card-text font-weight-light list-group list-group-flush"> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2026</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> プログラム委員 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">FSE 2026</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025 - 2026</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 編集委員 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">IACR Transactions on Symmetric Cryptology</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> プログラム委員 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">FSE 2025</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2024 - 2025</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 編集委員 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">IACR Transactions on Symmetric Cryptology</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2024</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> プログラム委員 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">ACISP 2024, ADSC 2024, FSE 2024, ISC 2024</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2024</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> Publication Chair </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">IWSEC 2024</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2023 - 2024</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 編集委員 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">IACR Transactions on Symmetric Cryptology</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2023</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> プログラム委員 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">ADSC 2023, FSE 2023</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2023</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> Local Organizing Chair </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">ACNS 2023</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2022 - 2023</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 編集委員 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">IACR Transactions on Symmetric Cryptology</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2022</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> Publicity Chair </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">ISPEC 2022</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2021</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> Local Organizing Chair </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">ACNS 2021</h6> </div> </div> </li> </ul> </div> <div class="academic-service-group"> <h4 class="academic-service-group-title">国内論文誌・国内会議</h4> <ul class="card-text font-weight-light list-group list-group-flush"> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2026 - Present</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.ipsj.or.jp/journal/cfp/27-M.html" rel="external nofollow noopener" target="_blank"> 編集幹事 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">情報処理学会 論文誌「AIによって変わる社会基盤を支えるコンピュータセキュリティ技術」</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2026 - Present</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 組織委員（リエゾン担当） </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">SCIS 2027</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2023 - Present</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.ieice.org/~isec/" rel="external nofollow noopener" target="_blank"> 研究会専門委員 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">電子情報通信学会 情報セキュリティ研究会</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2023 - Present</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.iwsec.org/csec/" rel="external nofollow noopener" target="_blank"> 研究会運営委員 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">情報処理学会 コンピュータセキュリティ研究会</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025 - 2026</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.iwsec.org/scis/2026/committee.html" rel="external nofollow noopener" target="_blank"> 組織委員（リエゾン担当） </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">SCIS 2026</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2021 - 2022</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.iwsec.org/scis/2022/" rel="external nofollow noopener" target="_blank"> 組織委員（出版担当） </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">SCIS 2022</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025 - 2026</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.ipsj.or.jp/journal/cfp/26-N.html" rel="external nofollow noopener" target="_blank"> 編集委員 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">情報処理学会 論文誌「サイバーとフィジカルが融合する未来を支えるコンピュータセキュリティ技術」特集号</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2024 - 2025</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.ipsj.or.jp/journal/cfp/25-N.html" rel="external nofollow noopener" target="_blank"> 編集委員 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">情報処理学会 論文誌「AI社会を安全にするコンピュータセキュリティ技術」特集号</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2024</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.iwsec.org/css/2024/committee.html" rel="external nofollow noopener" target="_blank"> プログラム委員 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">CSS 2024</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2023 - 2024</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.ipsj.or.jp/journal/cfp/24-T.html" rel="external nofollow noopener" target="_blank"> 編集委員 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">情報処理学会 論文誌「サプライチェーンを安全にするサイバーセキュリティ技術」特集号</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2022 - 2023</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.ipsj.or.jp/journal/cfp/23-P.html" rel="external nofollow noopener" target="_blank"> 編集委員 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">情報処理学会 論文誌「サイバー空間を安全にするコンピュータセキュリティ技術」特集号</h6> </div> </div> </li> </ul> </div> </section> </div> <a class="anchor" id="lectures"></a> <div class="card mt-3 p-3"> <h3 class="card-title font-weight-medium" id="cv-lectures">担当講義</h3> <div class="academic-teaching-education"> <ul class="card-text font-weight-light list-group list-group-flush"> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2026</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 社会情報学 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">東邦大学</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2026</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 暗号技術の基礎 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">公益社団法人 自動車技術会</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 社会情報学 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">東邦大学</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 暗号技術の基礎 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">公益社団法人 自動車技術会</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2024</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 暗号技術の基礎 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">公益社団法人 自動車技術会</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2023</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 暗号技術の基礎 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">公益社団法人 自動車技術会</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2022</span> </td> </tr> <tr> <td> <p class="location"> <i class="fa-solid fa-location-dot iconlocation"></i> 日本 </p> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> 暗号技術の基礎 </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">公益社団法人 自動車技術会</h6> </div> </div> </li> </ul> </div> <div> </div> </div> <a class="anchor" id="research-funding"></a> <div class="card mt-3 p-3"> <h3 class="card-title font-weight-medium" id="cv-research-funding">競争的研究資金</h3> <div> <ul class="card-text font-weight-light list-group list-group-flush"> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2024 - 2027</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://kaken.nii.ac.jp/ja/grant/KAKENHI-PROJECT-24H00696/" rel="external nofollow noopener" target="_blank"> バイデザインアプローチと高解像度解析に基づく高機能共通鍵暗号技術の開拓 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">日本学術振興会 科研費 基盤研究（A）</h6> <ul class="items"> <li> <span class="item">研究分担者（研究代表者：五十部孝典 教授） </span> </li> <li> <span class="item">研究期間：2024年4月 – 2027年3月（予定） </span> </li> </ul> </div> </div> </li> </ul> </div> </div> <a class="anchor" id="media-coverage"></a> <div class="card mt-3 p-3"> <h3 class="card-title font-weight-medium" id="cv-media-coverage">メディア報道</h3> <div> <ul class="card-text font-weight-light list-group list-group-flush"> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2026</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.nict.go.jp/press/2026/04/23-1.html" rel="external nofollow noopener" target="_blank"> 世界で利用されるチャットツール「Rocket.Chat」で複数の脆弱性を発見し改善へ </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">国立研究開発法人 情報通信研究機構</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">2026年4月23日</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2025</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.nict.go.jp/press/2025/08/04-1.html" rel="external nofollow noopener" target="_blank"> 分散型SNSプロトコル「Nostr」に対する世界初の包括的な安全性評価を実施 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">国立研究開発法人 情報通信研究機構</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">2025年8月4日</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2021</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.nikkan.co.jp/articles/view/617166" rel="external nofollow noopener" target="_blank"> NICT先端研究／情報通信（199）エンドツーエンド暗号化 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">日刊工業新聞</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">2021年11月2日</h6> </div> </div> </li> <li class="list-group-item"> <div class="row"> <div class="col-xs-2 col-sm-2 col-md-2 text-center date-column"> <table class="table-cv"> <tbody> <tr> <td> <span class="badge font-weight-bold danger-color-dark text-uppercase align-middle" style="min-width: 75px">2021</span> </td> </tr> </tbody> </table> </div> <div class="col-xs-10 col-sm-10 col-md-10 mt-2 mt-md-0"> <h6 class="title font-weight-bold ml-1 ml-md-4"> <a href="https://www.youtube.com/watch?v=GSo2W6it9lU" rel="external nofollow noopener" target="_blank"> テレワーク時代の暗号技術 </a> </h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">YouTube公式チャンネル NICT Channel</h6> <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">2021年10月12日</h6> </div> </div> </li> </ul> </div> </div> </div> </article> </div> </div> </div> </div> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script defer src="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.min.js" integrity="sha256-lo/r+jQ81wWrxdIiiiEEd538z4+dTJTt+leOuAS7GCw=" crossorigin="anonymous"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> </body> </html>
