@@ -269,17 +269,19 @@ html { scrollbar-gutter: stable; }
   .cv .academic-cv-selected-entry + .academic-cv-selected-entry {
     padding-top: 0.85rem;
   }
-  /* Reserve enough space for venue names alongside the publication details. */
+  /* Share timeline columns so wide venue badges do not shift selected results.
+   The minimum also keeps badges clear of the text on narrow tablets. */
   @media (min-width: 576px) {
     .cv .academic-cv-selected {
       padding-left: 40px;
     }
-    .cv .academic-cv-selected .date-column {
-      flex: 0 0 8.5rem;
-      width: 8.5rem;
-      max-width: 8.5rem;
+    .cv .list-group-item > .row > .date-column {
+      flex: 0 0 max(6.5rem, 16.6667%);
+      width: auto;
+      max-width: none;
+      min-width: 0;
     }
-    .cv .academic-cv-selected-info {
+    .cv .list-group-item > .row > .date-column + div {
       flex: 1 1 0;
       width: auto;
       max-width: none;
