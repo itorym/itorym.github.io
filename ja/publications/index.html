@@ -61,7 +61,207 @@
         border-top: 1px solid color-mix(in srgb, var(--global-text-color) 18%, transparent);
       }
     }
-  </style> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="配色を変更" aria-label="配色を変更"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="row"> <div class="col-sm-3"> <nav id="toc-sidebar" class="sticky-top toc toc-sidebar" aria-label="目次" data-toc-collapse="expanded" data-toc-collapse-depth=""></nav> </div> <div class="col-sm-9"> <div class="post"> <header class="post-header"> <h1 class="post-title">論文</h1> <p class="post-description"></p> </header> <article> <style>
+  </style> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="配色を変更" aria-label="配色を変更"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <style>
+  .academic-toc {
+    position: sticky;
+    top: var(--academic-toc-top, 64px);
+    z-index: 100;
+    margin-bottom: 1.5rem;
+    color: var(--global-text-color);
+    background: transparent;
+    border-bottom: 1px solid color-mix(in srgb, var(--global-text-color) 10%, transparent);
+    border-radius: 0;
+  }
+  .academic-toc.is-stuck,
+  .academic-toc[open] {
+    background: var(--global-bg-color);
+    border-radius: 0.35rem;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 4%);
+  }
+  .academic-toc summary {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 44px;
+    padding: 0.4rem 0.75rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.82rem;
+    color: color-mix(in srgb, var(--global-text-color) 72%, var(--global-bg-color));
+  }
+  .academic-toc summary::-webkit-details-marker {
+    display: none;
+  }
+  .academic-toc-label {
+    flex-shrink: 0;
+    font-weight: 500;
+  }
+  .academic-toc-current {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    opacity: 0.8;
+  }
+  .academic-toc-current:not(:empty)::before {
+    content: '/';
+    margin-right: 0.75rem;
+    opacity: 0.4;
+  }
+  .academic-toc-chevron {
+    width: 6px;
+    height: 6px;
+    margin: 0 0.2rem 3px;
+    flex-shrink: 0;
+    border-right: 1px solid currentColor;
+    border-bottom: 1px solid currentColor;
+    transform: rotate(45deg);
+    transition: transform 0.15s;
+  }
+  .academic-toc[open] .academic-toc-chevron {
+    transform: translateY(3px) rotate(225deg);
+  }
+  .academic-toc nav {
+    position: absolute;
+    top: calc(100% + 0.35rem);
+    left: 0;
+    right: 0;
+    max-height: var(--academic-toc-panel-height, 50vh);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--global-bg-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 0.6rem;
+    box-shadow: 0 6px 20px rgb(0 0 0 / 8%);
+    padding: 0.5rem;
+  }
+  .academic-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .academic-toc a {
+    display: block;
+    padding: 0.65rem 0.75rem;
+    border-inline-start: 2px solid transparent;
+    border-radius: 0.35rem;
+    color: var(--global-text-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-decoration: none;
+  }
+  .academic-toc a:hover {
+    color: var(--global-theme-color);
+    background: color-mix(in srgb, var(--global-theme-color) 6%, transparent);
+  }
+  .academic-toc a[aria-current='location'] {
+    border-inline-start-color: var(--global-theme-color);
+    color: var(--global-theme-color);
+    background: color-mix(in srgb, var(--global-theme-color) 5%, transparent);
+    font-weight: 500;
+  }
+  .academic-toc :is(summary, a):focus-visible {
+    outline: 2px solid var(--global-theme-color);
+    outline-offset: 2px;
+  }
+  [role='main']:has(.academic-toc) :is(h2, h3)[id] {
+    scroll-margin-top: var(--academic-toc-offset, 130px) !important;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .academic-toc-chevron {
+      transition: none;
+    }
+  }
+</style> <details class="academic-toc"> <summary> <span class="academic-toc-label">目次</span> <span class="academic-toc-current"></span> <span class="academic-toc-chevron" aria-hidden="true"></span> </summary> <nav aria-label="目次"><ul></ul></nav> </details> <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toc = document.querySelector('.academic-toc');
+    const root = toc.closest('[role="main"]');
+    const headings = [...root.querySelectorAll('h2, h3')].filter(
+      (heading) => !heading.hasAttribute('data-toc-skip') && !heading.closest('.publications, .academic-bibliography')
+    );
+    if (!headings.length) {
+      toc.hidden = true;
+      return;
+    }
+    const list = toc.querySelector('ul');
+    const links = headings.map((heading, index) => {
+      if (!heading.id) {
+        let id = `academic-section-${index + 1}`;
+        while (document.getElementById(id)) id += '-section';
+        heading.id = id;
+      }
+      const item = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = `#${encodeURIComponent(heading.id)}`;
+      link.textContent = heading.dataset.tocText || heading.textContent.trim();
+      item.append(link);
+      list.append(item);
+      return link;
+    });
+    const summary = toc.querySelector('summary');
+    list.addEventListener('click', (event) => {
+      if (event.target.closest('a')) {
+        toc.open = false;
+        summary.focus({ preventScroll: true });
+      }
+    });
+    document.addEventListener('click', (event) => {
+      if (!toc.contains(event.target)) toc.open = false;
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && toc.open) {
+        toc.open = false;
+        summary.focus({ preventScroll: true });
+      }
+    });
+    const navbar = document.getElementById('navbar');
+    let offset = 130;
+    let stickyTop = 64;
+    const updatePosition = () => {
+      const fixed = navbar && getComputedStyle(navbar).position === 'fixed';
+      const top = (fixed ? navbar.getBoundingClientRect().bottom : 0) + 8;
+      stickyTop = top;
+      offset = top + summary.getBoundingClientRect().height + 16;
+      root.style.setProperty('--academic-toc-top', `${top}px`);
+      root.style.setProperty('--academic-toc-offset', `${offset}px`);
+      root.style.setProperty('--academic-toc-panel-height', `${Math.max(100, innerHeight - offset - 24)}px`);
+    };
+    const current = toc.querySelector('.academic-toc-current');
+    const updateCurrent = () => {
+      toc.classList.toggle('is-stuck', toc.getBoundingClientRect().top <= stickyTop + 0.5);
+      let active = -1;
+      headings.forEach((heading, index) => {
+        if (heading.getBoundingClientRect().top <= offset + 4) active = index;
+      });
+      current.textContent = active >= 0 ? links[active].textContent : '';
+      links.forEach((link, index) => {
+        if (index === active) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    let queued = false;
+    window.addEventListener(
+      'scroll',
+      () => {
+        if (queued) return;
+        queued = true;
+        requestAnimationFrame(() => {
+          updateCurrent();
+          queued = false;
+        });
+      },
+      { passive: true }
+    );
+    const resize = () => {
+      updatePosition();
+      updateCurrent();
+    };
+    window.addEventListener('resize', resize);
+    if (navbar) new ResizeObserver(resize).observe(navbar);
+    resize();
+  });
+</script> <div class="post"> <header class="post-header"> <h1 class="post-title">論文</h1> <p class="post-description"></p> </header> <article> <style>
 html { scrollbar-gutter: stable; }
 .container[role="main"] {
   width: 100%;
@@ -1470,7 +1670,7 @@ html { scrollbar-gutter: stable; }
   <span class="na">day</span> <span class="p">=</span> <span class="s">{13}</span><span class="p">,</span>
   <span class="na">date</span> <span class="p">=</span> <span class="s">{2022-04-13}</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.cryptrec.go.jp/exreport/cryptrec-ex-3101-2021.pdf}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> </div> </section> </div> </article> </div> </div> </div> </div> <script>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> </div> </section> </div> </article> </div> </div> <script>
   window.alFolio = {
     compatBootstrap: false
   };
