@@ -307,6 +307,18 @@ html { scrollbar-gutter: stable; }
     box-sizing: border-box;
   }
 
+  /* Reserve room for contact labels; long URLs must wrap within the value. */
+  .cv > .card > table.table-cv {
+    width: 100%;
+  }
+  .cv > .card > table.table-cv td:first-child {
+    width: 30%;
+    white-space: nowrap;
+  }
+  .cv > .card > table.table-cv td:last-child {
+    overflow-wrap: anywhere;
+  }
+
   /* Timeline entries are groups, with no outer list markers. */
   .cv ul.list-group,
   .cv ul.list-group > li.list-group-item {
@@ -620,6 +632,29 @@ html { scrollbar-gutter: stable; }
   /* Stack each timeline entry as a single group on phones. Remove the
    desktop date offset and table/paragraph margins before spacing rows. */
   @media (max-width: 575.98px) {
+    /* Contact details need the full phone width, just like timeline entries. */
+    .cv > .card > table.table-cv,
+    .cv > .card > table.table-cv > tbody {
+      display: block;
+    }
+    .cv > .card > table.table-cv tr {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.25rem;
+    }
+    .cv > .card > table.table-cv tr + tr {
+      margin-top: 0.9rem;
+    }
+    .cv > .card > table.table-cv td {
+      display: block;
+      width: 100%;
+      min-width: 0;
+    }
+    @layer utilities {
+      .cv > .card > table.table-cv td {
+        padding: 0 !important; /* Align labels and values despite p-1/pl-2/pr-2. */
+      }
+    }
     .cv ul.list-group {
       padding-left: 0;
     }
