@@ -487,64 +487,117 @@ html { scrollbar-gutter: stable; }
   .academic-news-card { grid-template-columns: 1fr; gap: .35rem; padding: .85rem; }
 }
 </style> <style>
-/* Shared resource badges for Publications, Talks, and CV selections. */
-.academic-publications .academic-bibliography.publications div.award.hidden {
-  border: none;
-}
-.academic-publications .academic-publication-note {
-  display: block;
-  margin-top: .25rem;
-  color: var(--global-text-color-light);
-  font-size: .8rem;
-  line-height: 1.6;
-}
-.academic-publications .academic-bibliography .links,
-.academic-talks .academic-talk-card .links,
-.cv .academic-cv-selected-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .4rem;
-  margin-top: .65rem;
-}
-.academic-publications .academic-bibliography .links .btn,
-.academic-talks .academic-talk-card .links .btn,
-.cv .academic-cv-selected-links .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 1.85rem;
-  margin: 0;
-  padding: .3rem .75rem;
-  border: 1px solid color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 35%, transparent);
-  border-radius: 99px;
-  background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 10%, var(--global-bg-color, #111820));
-  color: var(--global-text-color, #ecf0f4);
-  font-size: .74rem;
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: .02em;
-  text-decoration: none;
-  box-shadow: none;
-  cursor: pointer;
-  transition: background-color .2s ease, border-color .2s ease;
-}
-.academic-publications .academic-bibliography .links .btn:hover,
-.academic-publications .academic-bibliography .links .btn:focus-visible,
-.academic-talks .academic-talk-card .links .btn:hover,
-.academic-talks .academic-talk-card .links .btn:focus-visible,
-.cv .academic-cv-selected-links .btn:hover,
-.cv .academic-cv-selected-links .btn:focus-visible {
-  border-color: var(--academic-accent, var(--academic-cv-accent));
-  background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 20%, var(--global-bg-color, #111820));
-  color: var(--global-text-color, #ecf0f4);
-  text-decoration: none;
-}
-.academic-publications .academic-bibliography .links .btn:focus-visible,
-.academic-talks .academic-talk-card .links .btn:focus-visible,
-.cv .academic-cv-selected-links .btn:focus-visible {
-  outline: 2px solid var(--academic-accent, var(--academic-cv-accent));
-  outline-offset: 3px;
-}
+  /* Shared resource badges for Publications, Talks, and CV selections. */
+  /* Supplementary panels share a shell; BibTeX retains code typography. */
+  .academic-publications .academic-bibliography.publications div.award.hidden,
+  .academic-publications .academic-bibliography.publications div.bibtex.hidden {
+    border: none;
+    border-radius: 0.6rem;
+    background: color-mix(in srgb, var(--academic-accent) 7%, var(--global-bg-color));
+    color: var(--global-text-color);
+    text-align: start;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden.open,
+  .academic-publications .academic-bibliography.publications div.bibtex.hidden.open {
+    margin-top: 0.75rem;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid var(--academic-line);
+    border-left: 3px solid var(--academic-accent);
+  }
+  .academic-publications .academic-bibliography.publications div.bibtex.hidden .highlight {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+  }
+  .academic-publications .academic-bibliography.publications div.bibtex.hidden pre {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    line-height: 1.7;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden p {
+    margin: 0;
+    line-height: 1.7;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden p + p {
+    margin-top: 0.35rem;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden a {
+    color: var(--academic-accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--academic-accent) 45%, transparent);
+    text-underline-offset: 0.2em;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden a:hover {
+    text-decoration-color: currentColor;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden a:focus-visible {
+    outline: 2px solid var(--academic-accent);
+    outline-offset: 3px;
+  }
+  .academic-publications .academic-publication-note {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--global-text-color-light);
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+  .academic-publications .academic-bibliography .links,
+  .academic-talks .academic-talk-card .links,
+  .cv .academic-cv-selected-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.65rem;
+  }
+  .academic-publications .academic-bibliography.publications .bibliography .links a.btn,
+  .academic-talks .academic-talk-card .links .btn,
+  .cv .academic-cv-selected-links .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.85rem;
+    margin: 0;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 35%, transparent);
+    border-radius: 99px;
+    background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 10%, var(--global-bg-color, #111820));
+    color: var(--global-text-color, #ecf0f4);
+    font-size: 0.74rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .academic-publications .academic-bibliography.publications .bibliography .links a.btn:hover,
+  .academic-publications .academic-bibliography.publications .bibliography .links a.btn:focus-visible,
+  .academic-talks .academic-talk-card .links .btn:hover,
+  .academic-talks .academic-talk-card .links .btn:focus-visible,
+  .cv .academic-cv-selected-links .btn:hover,
+  .cv .academic-cv-selected-links .btn:focus-visible {
+    border-color: var(--academic-accent, var(--academic-cv-accent));
+    background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 20%, var(--global-bg-color, #111820));
+    color: var(--global-text-color, #ecf0f4);
+    text-decoration: none;
+  }
+  .academic-publications .academic-bibliography.publications .bibliography .links a.btn:focus-visible,
+  .academic-talks .academic-talk-card .links .btn:focus-visible,
+  .cv .academic-cv-selected-links .btn:focus-visible {
+    outline: 2px solid var(--academic-accent, var(--academic-cv-accent));
+    outline-offset: 3px;
+  }
 </style> <div class="academic-content academic-talks"> <section class="academic-section" aria-labelledby="talks"> <div class="academic-section-heading"> <div> <p class="academic-eyebrow">01 / TALKS</p> <h2 id="talks">Talks (Peer-reviewed)</h2> </div> <span class="academic-count">3 talks</span> </div> <div class="academic-talk-list"> <article class="academic-talk-card"> <p class="title"> Payload Compromised: Full Key Recovery in Rocket.Chat E2EE </p> <p class="academic-muted"> Hayato Kimura, Ryoma Ito, Kazuhiko Minematsu, and Takanori Isobe </p> <p class="academic-talk-event"> Black Hat Asia 2026 Briefings </p> <p class="academic-muted"> <time datetime="2026-04-23">Apr 23, 2026</time> </p> <p class="academic-muted"> Speaker: Hayato Kimura </p> <div class="links"> <a class="btn btn-sm z-depth-0" href="https://blackhat.com/asia-26/briefings/schedule/#payload-compromised-full-key-recovery-in-rocketchat-e2ee-50105" rel="external nofollow noopener" target="_blank">Website</a> <a class="btn btn-sm z-depth-0" href="https://i.blackhat.com/Asia-26/Presentations/BHAS26-Kimura-Payload-Compromised.pdf" rel="external nofollow noopener" target="_blank">Slides</a> </div> </article> <article class="academic-talk-card"> <p class="title"> Not Sealed: Practical Attacks on Nostr, a Decentralized Censorship-Resistant Protocol </p> <p class="academic-muted"> Hayato Kimura, Ryoma Ito, Kazuhiko Minematsu, Shogo Shiraki, and Takanori Isobe </p> <p class="academic-talk-event"> Black Hat USA 2025 Briefings </p> <p class="academic-muted"> <time datetime="2025-08-06">Aug 6, 2025</time> </p> <p class="academic-muted"> Speaker: Hayato Kimura </p> <p> Acceptance rate: 8.2% (93/1,143). </p> <div class="links"> <a class="btn btn-sm z-depth-0" href="https://www.blackhat.com/us-25/briefings/schedule/index.html#not-sealed-practical-attacks-on-nostr-a-decentralized-censorship-resistant-protocol-45726" rel="external nofollow noopener" target="_blank">Website</a> <a class="btn btn-sm z-depth-0" href="https://i.blackhat.com/BH-USA-25/Presentations/USA-25-Kimura-Not-Sealed-Practical-Attacks-on-Nostr.pdf" rel="external nofollow noopener" target="_blank">Slides</a> </div> </article> <article class="academic-talk-card"> <p class="title"> Key Committing Security of AEZ </p> <p class="academic-muted"> Yu Long Chen, Antonio Flórez-Gutiérrez, Akiko Inoue, Ryoma Ito, Tetsu Iwata, Kazuhiko Minematsu, Nicky Mouha, Yusuke Naito, Ferdinand Sibleyras, and Yosuke Todo </p> <p class="academic-talk-event"> The Third NIST Workshop on Block Cipher Modes of Operation 2023 </p> <p class="academic-muted"> <time datetime="2023-10-04">Oct 4, 2023</time> </p> <p class="academic-muted"> Speaker: Yu Long Chen </p> <div class="links"> <a class="btn btn-sm z-depth-0" href="https://csrc.nist.gov/Presentations/2023/key-committing-security-of-aez" rel="external nofollow noopener" target="_blank">Website</a> <a class="btn btn-sm z-depth-0" href="https://csrc.nist.gov/csrc/media/Presentations/2023/key-committing-security-of-aez/images-media/sess-7-chen-bcm-workshop-2023.pdf" rel="external nofollow noopener" target="_blank">Slides</a> </div> </article> </div> </section> </div> </article> </div> </div> <script>
   window.alFolio = {
     compatBootstrap: false

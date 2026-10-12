@@ -487,64 +487,117 @@ html { scrollbar-gutter: stable; }
   .academic-news-card { grid-template-columns: 1fr; gap: .35rem; padding: .85rem; }
 }
 </style> <style>
-/* Shared resource badges for Publications, Talks, and CV selections. */
-.academic-publications .academic-bibliography.publications div.award.hidden {
-  border: none;
-}
-.academic-publications .academic-publication-note {
-  display: block;
-  margin-top: .25rem;
-  color: var(--global-text-color-light);
-  font-size: .8rem;
-  line-height: 1.6;
-}
-.academic-publications .academic-bibliography .links,
-.academic-talks .academic-talk-card .links,
-.cv .academic-cv-selected-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .4rem;
-  margin-top: .65rem;
-}
-.academic-publications .academic-bibliography .links .btn,
-.academic-talks .academic-talk-card .links .btn,
-.cv .academic-cv-selected-links .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 1.85rem;
-  margin: 0;
-  padding: .3rem .75rem;
-  border: 1px solid color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 35%, transparent);
-  border-radius: 99px;
-  background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 10%, var(--global-bg-color, #111820));
-  color: var(--global-text-color, #ecf0f4);
-  font-size: .74rem;
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: .02em;
-  text-decoration: none;
-  box-shadow: none;
-  cursor: pointer;
-  transition: background-color .2s ease, border-color .2s ease;
-}
-.academic-publications .academic-bibliography .links .btn:hover,
-.academic-publications .academic-bibliography .links .btn:focus-visible,
-.academic-talks .academic-talk-card .links .btn:hover,
-.academic-talks .academic-talk-card .links .btn:focus-visible,
-.cv .academic-cv-selected-links .btn:hover,
-.cv .academic-cv-selected-links .btn:focus-visible {
-  border-color: var(--academic-accent, var(--academic-cv-accent));
-  background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 20%, var(--global-bg-color, #111820));
-  color: var(--global-text-color, #ecf0f4);
-  text-decoration: none;
-}
-.academic-publications .academic-bibliography .links .btn:focus-visible,
-.academic-talks .academic-talk-card .links .btn:focus-visible,
-.cv .academic-cv-selected-links .btn:focus-visible {
-  outline: 2px solid var(--academic-accent, var(--academic-cv-accent));
-  outline-offset: 3px;
-}
+  /* Shared resource badges for Publications, Talks, and CV selections. */
+  /* Supplementary panels share a shell; BibTeX retains code typography. */
+  .academic-publications .academic-bibliography.publications div.award.hidden,
+  .academic-publications .academic-bibliography.publications div.bibtex.hidden {
+    border: none;
+    border-radius: 0.6rem;
+    background: color-mix(in srgb, var(--academic-accent) 7%, var(--global-bg-color));
+    color: var(--global-text-color);
+    text-align: start;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden.open,
+  .academic-publications .academic-bibliography.publications div.bibtex.hidden.open {
+    margin-top: 0.75rem;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid var(--academic-line);
+    border-left: 3px solid var(--academic-accent);
+  }
+  .academic-publications .academic-bibliography.publications div.bibtex.hidden .highlight {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+  }
+  .academic-publications .academic-bibliography.publications div.bibtex.hidden pre {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    line-height: 1.7;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden p {
+    margin: 0;
+    line-height: 1.7;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden p + p {
+    margin-top: 0.35rem;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden a {
+    color: var(--academic-accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--academic-accent) 45%, transparent);
+    text-underline-offset: 0.2em;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden a:hover {
+    text-decoration-color: currentColor;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden a:focus-visible {
+    outline: 2px solid var(--academic-accent);
+    outline-offset: 3px;
+  }
+  .academic-publications .academic-publication-note {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--global-text-color-light);
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+  .academic-publications .academic-bibliography .links,
+  .academic-talks .academic-talk-card .links,
+  .cv .academic-cv-selected-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.65rem;
+  }
+  .academic-publications .academic-bibliography.publications .bibliography .links a.btn,
+  .academic-talks .academic-talk-card .links .btn,
+  .cv .academic-cv-selected-links .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.85rem;
+    margin: 0;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 35%, transparent);
+    border-radius: 99px;
+    background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 10%, var(--global-bg-color, #111820));
+    color: var(--global-text-color, #ecf0f4);
+    font-size: 0.74rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .academic-publications .academic-bibliography.publications .bibliography .links a.btn:hover,
+  .academic-publications .academic-bibliography.publications .bibliography .links a.btn:focus-visible,
+  .academic-talks .academic-talk-card .links .btn:hover,
+  .academic-talks .academic-talk-card .links .btn:focus-visible,
+  .cv .academic-cv-selected-links .btn:hover,
+  .cv .academic-cv-selected-links .btn:focus-visible {
+    border-color: var(--academic-accent, var(--academic-cv-accent));
+    background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 20%, var(--global-bg-color, #111820));
+    color: var(--global-text-color, #ecf0f4);
+    text-decoration: none;
+  }
+  .academic-publications .academic-bibliography.publications .bibliography .links a.btn:focus-visible,
+  .academic-talks .academic-talk-card .links .btn:focus-visible,
+  .cv .academic-cv-selected-links .btn:focus-visible {
+    outline: 2px solid var(--academic-accent, var(--academic-cv-accent));
+    outline-offset: 3px;
+  }
 </style> <div class="academic-content academic-publications"> <section class="academic-section" aria-labelledby="journal-papers"> <div class="academic-section-heading"> <div> <p class="academic-eyebrow">01 / JOURNALS</p> <h2 id="journal-papers">Peer-reviewed Journal Papers</h2> </div> <span class="academic-count">21 papers</span> </div> <div class="publications academic-bibliography"> <h2 class="bibliography">2026</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">IACR CiC</abbr> </div> <div id="DBLP:journals/cic/TaiyamaISTTI26" class="col-sm-8"> <div class="title">Generalizing Bit-based Rebound Attacks on AES-like Hashing</div> <div class="author"> Kodai Taiyama , <em>Ryoma Ito</em> , Kosei Sakamoto , Kazuma Taka , Keita Toyama , and Takanori Isobe </div> <div class="periodical"> <em>IACR Commun. Cryptol. (to appear)</em>, 2026 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li></ol> <h2 class="bibliography">2025</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">IACR CiC</abbr> </div> <div id="DBLP:journals/cic/ShirayaBIIRSTUI25" class="col-sm-8"> <div class="title">Exploring SHA Instructions and Its Application to AES-based Schemes</div> <div class="author"> Takuro Shiraya , Subhadeep Banik , Tatsuya Ishikawa , <em>Ryoma Ito</em> , Mostafizar Rahman , Kosei Sakamoto , Atsushi Tanaka , Shion Utsumi , and Takanori Isobe </div> <div class="periodical"> <em>IACR Commun. Cryptol.</em>, 2025 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.62056/ANXRUDY6B" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://github.com/sry727/AES-SHA-software-benchmark" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">DBLP:journals/cic/ShirayaBIIRSTUI25</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Shiraya, Takuro and Banik, Subhadeep and Ishikawa, Tatsuya and Ito, Ryoma and Rahman, Mostafizar and Sakamoto, Kosei and Tanaka, Atsushi and Utsumi, Shion and Isobe, Takanori}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Exploring {SHA} Instructions and Its Application to AES-based Schemes}</span><span class="p">,</span>

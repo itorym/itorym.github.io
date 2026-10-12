@@ -487,64 +487,117 @@ html { scrollbar-gutter: stable; }
   .academic-news-card { grid-template-columns: 1fr; gap: .35rem; padding: .85rem; }
 }
 </style> <style>
-/* Shared resource badges for Publications, Talks, and CV selections. */
-.academic-publications .academic-bibliography.publications div.award.hidden {
-  border: none;
-}
-.academic-publications .academic-publication-note {
-  display: block;
-  margin-top: .25rem;
-  color: var(--global-text-color-light);
-  font-size: .8rem;
-  line-height: 1.6;
-}
-.academic-publications .academic-bibliography .links,
-.academic-talks .academic-talk-card .links,
-.cv .academic-cv-selected-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .4rem;
-  margin-top: .65rem;
-}
-.academic-publications .academic-bibliography .links .btn,
-.academic-talks .academic-talk-card .links .btn,
-.cv .academic-cv-selected-links .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 1.85rem;
-  margin: 0;
-  padding: .3rem .75rem;
-  border: 1px solid color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 35%, transparent);
-  border-radius: 99px;
-  background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 10%, var(--global-bg-color, #111820));
-  color: var(--global-text-color, #ecf0f4);
-  font-size: .74rem;
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: .02em;
-  text-decoration: none;
-  box-shadow: none;
-  cursor: pointer;
-  transition: background-color .2s ease, border-color .2s ease;
-}
-.academic-publications .academic-bibliography .links .btn:hover,
-.academic-publications .academic-bibliography .links .btn:focus-visible,
-.academic-talks .academic-talk-card .links .btn:hover,
-.academic-talks .academic-talk-card .links .btn:focus-visible,
-.cv .academic-cv-selected-links .btn:hover,
-.cv .academic-cv-selected-links .btn:focus-visible {
-  border-color: var(--academic-accent, var(--academic-cv-accent));
-  background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 20%, var(--global-bg-color, #111820));
-  color: var(--global-text-color, #ecf0f4);
-  text-decoration: none;
-}
-.academic-publications .academic-bibliography .links .btn:focus-visible,
-.academic-talks .academic-talk-card .links .btn:focus-visible,
-.cv .academic-cv-selected-links .btn:focus-visible {
-  outline: 2px solid var(--academic-accent, var(--academic-cv-accent));
-  outline-offset: 3px;
-}
+  /* Shared resource badges for Publications, Talks, and CV selections. */
+  /* Supplementary panels share a shell; BibTeX retains code typography. */
+  .academic-publications .academic-bibliography.publications div.award.hidden,
+  .academic-publications .academic-bibliography.publications div.bibtex.hidden {
+    border: none;
+    border-radius: 0.6rem;
+    background: color-mix(in srgb, var(--academic-accent) 7%, var(--global-bg-color));
+    color: var(--global-text-color);
+    text-align: start;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden.open,
+  .academic-publications .academic-bibliography.publications div.bibtex.hidden.open {
+    margin-top: 0.75rem;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid var(--academic-line);
+    border-left: 3px solid var(--academic-accent);
+  }
+  .academic-publications .academic-bibliography.publications div.bibtex.hidden .highlight {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+  }
+  .academic-publications .academic-bibliography.publications div.bibtex.hidden pre {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    line-height: 1.7;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden p {
+    margin: 0;
+    line-height: 1.7;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden p + p {
+    margin-top: 0.35rem;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden a {
+    color: var(--academic-accent);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--academic-accent) 45%, transparent);
+    text-underline-offset: 0.2em;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden a:hover {
+    text-decoration-color: currentColor;
+  }
+  .academic-publications .academic-bibliography.publications div.award.hidden a:focus-visible {
+    outline: 2px solid var(--academic-accent);
+    outline-offset: 3px;
+  }
+  .academic-publications .academic-publication-note {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--global-text-color-light);
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+  .academic-publications .academic-bibliography .links,
+  .academic-talks .academic-talk-card .links,
+  .cv .academic-cv-selected-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.65rem;
+  }
+  .academic-publications .academic-bibliography.publications .bibliography .links a.btn,
+  .academic-talks .academic-talk-card .links .btn,
+  .cv .academic-cv-selected-links .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1.85rem;
+    margin: 0;
+    padding: 0.3rem 0.75rem;
+    border: 1px solid color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 35%, transparent);
+    border-radius: 99px;
+    background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 10%, var(--global-bg-color, #111820));
+    color: var(--global-text-color, #ecf0f4);
+    font-size: 0.74rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    box-shadow: none;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .academic-publications .academic-bibliography.publications .bibliography .links a.btn:hover,
+  .academic-publications .academic-bibliography.publications .bibliography .links a.btn:focus-visible,
+  .academic-talks .academic-talk-card .links .btn:hover,
+  .academic-talks .academic-talk-card .links .btn:focus-visible,
+  .cv .academic-cv-selected-links .btn:hover,
+  .cv .academic-cv-selected-links .btn:focus-visible {
+    border-color: var(--academic-accent, var(--academic-cv-accent));
+    background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 20%, var(--global-bg-color, #111820));
+    color: var(--global-text-color, #ecf0f4);
+    text-decoration: none;
+  }
+  .academic-publications .academic-bibliography.publications .bibliography .links a.btn:focus-visible,
+  .academic-talks .academic-talk-card .links .btn:focus-visible,
+  .cv .academic-cv-selected-links .btn:focus-visible {
+    outline: 2px solid var(--academic-accent, var(--academic-cv-accent));
+    outline-offset: 3px;
+  }
 </style> <div class="academic-content academic-publications"> <section class="academic-section" aria-labelledby="journal-papers"> <div class="academic-section-heading"> <div> <p class="academic-eyebrow">01 / JOURNALS</p> <h2 id="journal-papers">査読付き学術誌論文</h2> </div> <span class="academic-count">21 件</span> </div> <div class="publications academic-bibliography"> <h2 class="bibliography">2026</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">IACR CiC</abbr> </div> <div id="DBLP:journals/cic/TaiyamaISTTI26" class="col-sm-8"> <div class="title">Generalizing Bit-based Rebound Attacks on AES-like Hashing</div> <div class="author"> Kodai Taiyama , <em>Ryoma Ito</em> , Kosei Sakamoto , Kazuma Taka , Keita Toyama , and Takanori Isobe </div> <div class="periodical"> <em>IACR Commun. Cryptol. (to appear)</em>, 2026 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li></ol> <h2 class="bibliography">2025</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">IACR CiC</abbr> </div> <div id="DBLP:journals/cic/ShirayaBIIRSTUI25" class="col-sm-8"> <div class="title">Exploring SHA Instructions and Its Application to AES-based Schemes</div> <div class="author"> Takuro Shiraya , Subhadeep Banik , Tatsuya Ishikawa , <em>Ryoma Ito</em> , Mostafizar Rahman , Kosei Sakamoto , Atsushi Tanaka , Shion Utsumi , and Takanori Isobe </div> <div class="periodical"> <em>IACR Commun. Cryptol.</em>, 2025 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.62056/ANXRUDY6B" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://github.com/sry727/AES-SHA-software-benchmark" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">DBLP:journals/cic/ShirayaBIIRSTUI25</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{Shiraya, Takuro and Banik, Subhadeep and Ishikawa, Tatsuya and Ito, Ryoma and Rahman, Mostafizar and Sakamoto, Kosei and Tanaka, Atsushi and Utsumi, Shion and Isobe, Takanori}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{Exploring {SHA} Instructions and Its Application to AES-based Schemes}</span><span class="p">,</span>
@@ -1164,7 +1217,7 @@ html { scrollbar-gutter: stable; }
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
   <span class="na">month</span> <span class="p">=</span> <span class="nv">mar</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://ken.ieice.org/ken/paper/202603177ctx/}</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">ICSS</abbr> </div> <div id="domestic:ICSS2025-86" class="col-sm-8"> <div class="title">LINEグループ通信に対するTamarin-Proverを用いた安全性自動検証</div> <div class="author"> 松本岳大 , 田中篤 , 山下恭佑 , <em> 伊藤竜馬</em> , 五十部孝典 </div> <div class="periodical"> <em>信学技報</em>, 2026年3月 </div> <div class="periodical"> ICSS2025-86 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p></p> <p>ICSS研究賞</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">domestic:ICSS2025-86</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">ICSS</abbr> </div> <div id="domestic:ICSS2025-86" class="col-sm-8"> <div class="title">LINEグループ通信に対するTamarin-Proverを用いた安全性自動検証</div> <div class="author"> 松本岳大 , 田中篤 , 山下恭佑 , <em> 伊藤竜馬</em> , 五十部孝典 </div> <div class="periodical"> <em>信学技報</em>, 2026年3月 </div> <div class="periodical"> ICSS2025-86 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p>ICSS研究賞</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">domestic:ICSS2025-86</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{{松本岳大} and {田中篤} and {山下恭佑} and {伊藤竜馬} and {五十部孝典}}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{{LINEグループ通信に対するTamarin-Proverを用いた安全性自動検証}}</span><span class="p">,</span>
   <span class="na">journal</span> <span class="p">=</span> <span class="s">{信学技報}</span><span class="p">,</span>
@@ -1211,7 +1264,7 @@ html { scrollbar-gutter: stable; }
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
   <span class="na">month</span> <span class="p">=</span> <span class="nv">oct</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.iwsec.org/css/2025/program.html#3G3}</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">CSS</abbr> </div> <div id="domestic:CSS2025:Shiraki:3G3-2" class="col-sm-8"> <div class="title">WhatsAppに対する不正デバイス登録攻撃</div> <div class="author"> 白木章伍 , 木村隼人 , <em> 伊藤竜馬</em> , 峯松一彦 , 五十部孝典 </div> <div class="periodical"> <em>コンピュータセキュリティシンポジウム 2025 - CSS 2025</em>, 2025年10月 </div> <div class="periodical"> 3G3-2 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p></p> <p><a href="https://drive.google.com/file/d/16p1-NC73uCxHkvwfDZ76QAsKZk5FfPLx/view?usp=sharing" rel="external nofollow noopener" target="_blank">最優秀論文賞</a></p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:CSS2025:Shiraki:3G3-2</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">CSS</abbr> </div> <div id="domestic:CSS2025:Shiraki:3G3-2" class="col-sm-8"> <div class="title">WhatsAppに対する不正デバイス登録攻撃</div> <div class="author"> 白木章伍 , 木村隼人 , <em> 伊藤竜馬</em> , 峯松一彦 , 五十部孝典 </div> <div class="periodical"> <em>コンピュータセキュリティシンポジウム 2025 - CSS 2025</em>, 2025年10月 </div> <div class="periodical"> 3G3-2 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p><a href="https://drive.google.com/file/d/16p1-NC73uCxHkvwfDZ76QAsKZk5FfPLx/view?usp=sharing" rel="external nofollow noopener" target="_blank">最優秀論文賞</a></p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:CSS2025:Shiraki:3G3-2</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{{白木章伍} and {木村隼人} and {伊藤竜馬} and {峯松一彦} and {五十部孝典}}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{{WhatsAppに対する不正デバイス登録攻撃}}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{コンピュータセキュリティシンポジウム 2025 - CSS 2025}</span><span class="p">,</span>
@@ -1269,7 +1322,7 @@ html { scrollbar-gutter: stable; }
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
   <span class="na">month</span> <span class="p">=</span> <span class="nv">mar</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://ken.ieice.org/ken/paper/20250307Yc8K/}</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">SCIS</abbr> </div> <div id="domestic:SCIS2025:Kimura:2C2-2" class="col-sm-8"> <div class="title">ロケットチャットのエンドツーエンド暗号化に対する安全性解析</div> <div class="author"> 木村隼人 , <em> 伊藤竜馬</em> , 峯松一彦 , 五十部孝典 </div> <div class="periodical"> <em>2025年 暗号と情報セキュリティシンポジウム - SCIS 2025</em>, 2025年1月 </div> <div class="periodical"> 2C2-2 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p></p> <p><a href="https://drive.google.com/file/d/1QehzSmkmJ7tDxO77PoJX80A0AjH2DcCS/view?usp=sharing" rel="external nofollow noopener" target="_blank">SCIS論文賞</a></p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:SCIS2025:Kimura:2C2-2</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">SCIS</abbr> </div> <div id="domestic:SCIS2025:Kimura:2C2-2" class="col-sm-8"> <div class="title">ロケットチャットのエンドツーエンド暗号化に対する安全性解析</div> <div class="author"> 木村隼人 , <em> 伊藤竜馬</em> , 峯松一彦 , 五十部孝典 </div> <div class="periodical"> <em>2025年 暗号と情報セキュリティシンポジウム - SCIS 2025</em>, 2025年1月 </div> <div class="periodical"> 2C2-2 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p><a href="https://drive.google.com/file/d/1QehzSmkmJ7tDxO77PoJX80A0AjH2DcCS/view?usp=sharing" rel="external nofollow noopener" target="_blank">SCIS論文賞</a></p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:SCIS2025:Kimura:2C2-2</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{{木村隼人} and {伊藤竜馬} and {峯松一彦} and {五十部孝典}}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{{ロケットチャットのエンドツーエンド暗号化に対する安全性解析}}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{2025年 暗号と情報セキュリティシンポジウム - SCIS 2025}</span><span class="p">,</span>
@@ -1278,7 +1331,7 @@ html { scrollbar-gutter: stable; }
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
   <span class="na">month</span> <span class="p">=</span> <span class="nv">jan</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.iwsec.org/scis/2025/program.html#2C2}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> <h2 class="bibliography">2024</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">CSS</abbr> </div> <div id="domestic:CSS2024:Kimura:1H6-1" class="col-sm-8"> <div class="title">Link Previewを介した暗号化DMに対する平文回復攻撃</div> <div class="author"> 木村隼人 , 白木章伍 , <em> 伊藤竜馬</em> , 峯松一彦 , 五十部孝典 </div> <div class="periodical"> <em>コンピュータセキュリティシンポジウム 2024 - CSS 2024</em>, 2024年10月 </div> <div class="periodical"> 1H6-1 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p></p> <p><a href="https://drive.google.com/file/d/1uh5X_IJF3IbWsJHjAcFOPOSnh3U6SLIw/view?usp=sharing" rel="external nofollow noopener" target="_blank">優秀論文賞</a> / <a href="https://drive.google.com/file/d/1EH4gfIxwa8VLfgJYMJAG9_fBbHLCN0jq/view?usp=sharing" rel="external nofollow noopener" target="_blank">エシカルプラクティス賞</a></p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:CSS2024:Kimura:1H6-1</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> <h2 class="bibliography">2024</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">CSS</abbr> </div> <div id="domestic:CSS2024:Kimura:1H6-1" class="col-sm-8"> <div class="title">Link Previewを介した暗号化DMに対する平文回復攻撃</div> <div class="author"> 木村隼人 , 白木章伍 , <em> 伊藤竜馬</em> , 峯松一彦 , 五十部孝典 </div> <div class="periodical"> <em>コンピュータセキュリティシンポジウム 2024 - CSS 2024</em>, 2024年10月 </div> <div class="periodical"> 1H6-1 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p><a href="https://drive.google.com/file/d/1uh5X_IJF3IbWsJHjAcFOPOSnh3U6SLIw/view?usp=sharing" rel="external nofollow noopener" target="_blank">優秀論文賞</a> / <a href="https://drive.google.com/file/d/1EH4gfIxwa8VLfgJYMJAG9_fBbHLCN0jq/view?usp=sharing" rel="external nofollow noopener" target="_blank">エシカルプラクティス賞</a></p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:CSS2024:Kimura:1H6-1</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{{木村隼人} and {白木章伍} and {伊藤竜馬} and {峯松一彦} and {五十部孝典}}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{{Link Previewを介した暗号化DMに対する平文回復攻撃}}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{コンピュータセキュリティシンポジウム 2024 - CSS 2024}</span><span class="p">,</span>
@@ -1287,7 +1340,7 @@ html { scrollbar-gutter: stable; }
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
   <span class="na">month</span> <span class="p">=</span> <span class="nv">oct</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.iwsec.org/css/2024/program.html#1H6}</span><span class="p">,</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">ISEC</abbr> </div> <div id="domestic:ISEC2024-19" class="col-sm-8"> <div class="title">AESのDavies-Meyerモードに対する衝突攻撃</div> <div class="author"> 泰山幸大 , 阪本光星 , <em> 伊藤竜馬</em> , 髙和真 , 五十部孝典 </div> <div class="periodical"> <em>信学技報</em>, 2024年7月 </div> <div class="periodical"> ISEC2024-19 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p></p> <p>情報セキュリティ研究賞</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">domestic:ISEC2024-19</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">ISEC</abbr> </div> <div id="domestic:ISEC2024-19" class="col-sm-8"> <div class="title">AESのDavies-Meyerモードに対する衝突攻撃</div> <div class="author"> 泰山幸大 , 阪本光星 , <em> 伊藤竜馬</em> , 髙和真 , 五十部孝典 </div> <div class="periodical"> <em>信学技報</em>, 2024年7月 </div> <div class="periodical"> ISEC2024-19 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p>情報セキュリティ研究賞</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">domestic:ISEC2024-19</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{{泰山幸大} and {阪本光星} and {伊藤竜馬} and {髙和真} and {五十部孝典}}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{{AESのDavies-Meyerモードに対する衝突攻撃}}</span><span class="p">,</span>
   <span class="na">journal</span> <span class="p">=</span> <span class="s">{信学技報}</span><span class="p">,</span>
@@ -1329,7 +1382,7 @@ html { scrollbar-gutter: stable; }
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
   <span class="na">month</span> <span class="p">=</span> <span class="nv">mar</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://ken.ieice.org/ken/paper/20240321qcCq/}</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">SCIS</abbr> </div> <div id="domestic:SCIS2024:Taka:3C4-3" class="col-sm-8"> <div class="title">分割統治法SATを用いたAESとCamelliaの最大差分/線形特性確率の導出</div> <div class="author"> 髙和真 , 阪本光星 , <em> 伊藤竜馬</em> , 芝廉太朗 , 内海潮音 , 五十部孝典 </div> <div class="periodical"> <em>2024年 暗号と情報セキュリティシンポジウム - SCIS 2024</em>, 2024年1月 </div> <div class="periodical"> 3C4-3 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p></p> <p>イノベーション論文賞</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:SCIS2024:Taka:3C4-3</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">SCIS</abbr> </div> <div id="domestic:SCIS2024:Taka:3C4-3" class="col-sm-8"> <div class="title">分割統治法SATを用いたAESとCamelliaの最大差分/線形特性確率の導出</div> <div class="author"> 髙和真 , 阪本光星 , <em> 伊藤竜馬</em> , 芝廉太朗 , 内海潮音 , 五十部孝典 </div> <div class="periodical"> <em>2024年 暗号と情報セキュリティシンポジウム - SCIS 2024</em>, 2024年1月 </div> <div class="periodical"> 3C4-3 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p>イノベーション論文賞</p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:SCIS2024:Taka:3C4-3</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{{髙和真} and {阪本光星} and {伊藤竜馬} and {芝廉太朗} and {内海潮音} and {五十部孝典}}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{{分割統治法SATを用いたAESとCamelliaの最大差分/線形特性確率の導出}}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{2024年 暗号と情報セキュリティシンポジウム - SCIS 2024}</span><span class="p">,</span>
@@ -1347,7 +1400,7 @@ html { scrollbar-gutter: stable; }
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
   <span class="na">month</span> <span class="p">=</span> <span class="nv">jan</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.iwsec.org/scis/2024/program.html#1C2}</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> <h2 class="bibliography">2023</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">CSS</abbr> </div> <div id="domestic:CSS2023:Kimura:2E4-3" class="col-sm-8"> <div class="title">分散型SNSプロトコルNostrに対する改ざん攻撃</div> <div class="author"> 木村隼人 , <em> 伊藤竜馬</em> , 峯松一彦 , 五十部孝典 </div> <div class="periodical"> <em>コンピュータセキュリティシンポジウム 2023 - CSS 2023</em>, 2023年11月 </div> <div class="periodical"> 2E4-3 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p></p> <p><a href="https://drive.google.com/file/d/1kjc4dwK0nvDCjvxu1e0hWJhmzS7vGrRf/view?usp=sharing" rel="external nofollow noopener" target="_blank">学生論文賞</a></p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:CSS2023:Kimura:2E4-3</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> </ol> <h2 class="bibliography">2023</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">CSS</abbr> </div> <div id="domestic:CSS2023:Kimura:2E4-3" class="col-sm-8"> <div class="title">分散型SNSプロトコルNostrに対する改ざん攻撃</div> <div class="author"> 木村隼人 , <em> 伊藤竜馬</em> , 峯松一彦 , 五十部孝典 </div> <div class="periodical"> <em>コンピュータセキュリティシンポジウム 2023 - CSS 2023</em>, 2023年11月 </div> <div class="periodical"> 2E4-3 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> </div> <div class="award hidden d-print-inline"> <p><a href="https://drive.google.com/file/d/1kjc4dwK0nvDCjvxu1e0hWJhmzS7vGrRf/view?usp=sharing" rel="external nofollow noopener" target="_blank">学生論文賞</a></p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:CSS2023:Kimura:2E4-3</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{{木村隼人} and {伊藤竜馬} and {峯松一彦} and {五十部孝典}}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{{分散型SNSプロトコルNostrに対する改ざん攻撃}}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{コンピュータセキュリティシンポジウム 2023 - CSS 2023}</span><span class="p">,</span>
@@ -1367,7 +1420,7 @@ html { scrollbar-gutter: stable; }
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
   <span class="na">month</span> <span class="p">=</span> <span class="nv">mar</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.ieice.org/ken/paper/20220311cCiY/}</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> <h2 class="bibliography">2021</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">CSS</abbr> </div> <div id="domestic:CSS2021:Isobe:2E3-3" class="col-sm-8"> <div class="title">エンドツーエンド暗号化SFrameに対する安全性評価</div> <div class="author"> 五十部孝典 , <em> 伊藤竜馬</em> , 峯松一彦 </div> <div class="periodical"> <em>コンピュータセキュリティシンポジウム 2021 - CSS 2021</em>, 2021年10月 </div> <div class="periodical"> 2E3-3 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://speakerdeck.com/itorym/endotuendoan-hao-hua-sframefalsean-quan-xing-ping-jia" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Slides</a> </div> <div class="award hidden d-print-inline"> <p></p> <p><a href="https://drive.google.com/file/d/1hYEaJ84KZSfFPDVoogU59ktLZh1qu24A/view?usp=sharing" rel="external nofollow noopener" target="_blank">奨励賞</a> / <a href="https://drive.google.com/file/d/1tI_ci6zZBG4t4PvNgeSlSvLfXBpULuoe/view?usp=sharing" rel="external nofollow noopener" target="_blank">山下記念研究賞</a></p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:CSS2021:Isobe:2E3-3</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li></ol> <h2 class="bibliography">2021</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">CSS</abbr> </div> <div id="domestic:CSS2021:Isobe:2E3-3" class="col-sm-8"> <div class="title">エンドツーエンド暗号化SFrameに対する安全性評価</div> <div class="author"> 五十部孝典 , <em> 伊藤竜馬</em> , 峯松一彦 </div> <div class="periodical"> <em>コンピュータセキュリティシンポジウム 2021 - CSS 2021</em>, 2021年10月 </div> <div class="periodical"> 2E3-3 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://speakerdeck.com/itorym/endotuendoan-hao-hua-sframefalsean-quan-xing-ping-jia" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Slides</a> </div> <div class="award hidden d-print-inline"> <p><a href="https://drive.google.com/file/d/1hYEaJ84KZSfFPDVoogU59ktLZh1qu24A/view?usp=sharing" rel="external nofollow noopener" target="_blank">奨励賞</a> / <a href="https://drive.google.com/file/d/1tI_ci6zZBG4t4PvNgeSlSvLfXBpULuoe/view?usp=sharing" rel="external nofollow noopener" target="_blank">山下記念研究賞</a></p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:CSS2021:Isobe:2E3-3</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{{五十部孝典} and {伊藤竜馬} and {峯松一彦}}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{{エンドツーエンド暗号化SFrameに対する安全性評価}}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{コンピュータセキュリティシンポジウム 2021 - CSS 2021}</span><span class="p">,</span>
@@ -1385,7 +1438,7 @@ html { scrollbar-gutter: stable; }
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>
   <span class="na">month</span> <span class="p">=</span> <span class="nv">mar</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{http://www.ieice-taikai.jp/2021general/jpn/program.html}</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">SCIS</abbr> </div> <div id="domestic:SCIS2021:Isobe:3B3-1" class="col-sm-8"> <div class="title">Zoomのエンドツーエンド暗号化に対する安全性評価</div> <div class="author"> 五十部孝典 , <em> 伊藤竜馬</em> </div> <div class="periodical"> <em>2021年 暗号と情報セキュリティシンポジウム - SCIS 2021</em>, 2021年1月 </div> <div class="periodical"> 3B3-1 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://speakerdeck.com/itorym/zoomfalseendotuendoan-hao-hua-nidui-suruan-quan-xing-ping-jia" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Slides</a> </div> <div class="award hidden d-print-inline"> <p></p> <p><a href="https://drive.google.com/file/d/1-5XTw4_ShXhQsAueYPpfwnm1X-4XhJYs/view?usp=sharing" rel="external nofollow noopener" target="_blank">イノベーション論文賞</a></p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:SCIS2021:Isobe:3B3-1</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">SCIS</abbr> </div> <div id="domestic:SCIS2021:Isobe:3B3-1" class="col-sm-8"> <div class="title">Zoomのエンドツーエンド暗号化に対する安全性評価</div> <div class="author"> 五十部孝典 , <em> 伊藤竜馬</em> </div> <div class="periodical"> <em>2021年 暗号と情報セキュリティシンポジウム - SCIS 2021</em>, 2021年1月 </div> <div class="periodical"> 3B3-1 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://speakerdeck.com/itorym/zoomfalseendotuendoan-hao-hua-nidui-suruan-quan-xing-ping-jia" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Slides</a> </div> <div class="award hidden d-print-inline"> <p><a href="https://drive.google.com/file/d/1-5XTw4_ShXhQsAueYPpfwnm1X-4XhJYs/view?usp=sharing" rel="external nofollow noopener" target="_blank">イノベーション論文賞</a></p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:SCIS2021:Isobe:3B3-1</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{{五十部孝典} and {伊藤竜馬}}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{{Zoomのエンドツーエンド暗号化に対する安全性評価}}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{2021年 暗号と情報セキュリティシンポジウム - SCIS 2021}</span><span class="p">,</span>
@@ -1443,7 +1496,7 @@ html { scrollbar-gutter: stable; }
   <span class="na">year</span> <span class="p">=</span> <span class="s">{2015}</span><span class="p">,</span>
   <span class="na">month</span> <span class="p">=</span> <span class="nv">mar</span><span class="p">,</span>
   <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.ieice.org/ken/paper/20150304rBZE/}</span>
-<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">SCIS</abbr> </div> <div id="domestic:SCIS2015:Ito:2E2-3" class="col-sm-8"> <div class="title">WPA における RC4 の内部状態に関する新しい線形相関</div> <div class="author"> <em> 伊藤竜馬</em> , 宮地充子 </div> <div class="periodical"> <em>2015年 暗号と情報セキュリティシンポジウム - SCIS 2015</em>, 2015年1月 </div> <div class="periodical"> 2E2-3 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://speakerdeck.com/itorym/wpaniokerurc4falsenei-bu-zhuang-tai-niguan-suruxin-siixian-xing-xiang-guan" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Slides</a> </div> <div class="award hidden d-print-inline"> <p></p> <p><a href="https://drive.google.com/file/d/1Nav_sD2mHyGwAs5FeTXGKnEd1-d_s6PD/view?usp=sharing" rel="external nofollow noopener" target="_blank">SCIS論文賞</a></p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:SCIS2015:Ito:2E2-3</span><span class="p">,</span>
+<span class="p">}</span></code></pre></figure> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100">SCIS</abbr> </div> <div id="domestic:SCIS2015:Ito:2E2-3" class="col-sm-8"> <div class="title">WPA における RC4 の内部状態に関する新しい線形相関</div> <div class="author"> <em> 伊藤竜馬</em> , 宮地充子 </div> <div class="periodical"> <em>2015年 暗号と情報セキュリティシンポジウム - SCIS 2015</em>, 2015年1月 </div> <div class="periodical"> 2E2-3 </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Award</a> <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a> <a href="https://speakerdeck.com/itorym/wpaniokerurc4falsenei-bu-zhuang-tai-niguan-suruxin-siixian-xing-xiang-guan" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Slides</a> </div> <div class="award hidden d-print-inline"> <p><a href="https://drive.google.com/file/d/1Nav_sD2mHyGwAs5FeTXGKnEd1-d_s6PD/view?usp=sharing" rel="external nofollow noopener" target="_blank">SCIS論文賞</a></p> </div> <div class="bibtex hidden"> <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">domestic:SCIS2015:Ito:2E2-3</span><span class="p">,</span>
   <span class="na">author</span> <span class="p">=</span> <span class="s">{{伊藤竜馬} and {宮地充子}}</span><span class="p">,</span>
   <span class="na">title</span> <span class="p">=</span> <span class="s">{{WPA における RC4 の内部状態に関する新しい線形相関}}</span><span class="p">,</span>
   <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{2015年 暗号と情報セキュリティシンポジウム - SCIS 2015}</span><span class="p">,</span>
