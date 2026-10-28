@@ -4,7 +4,52 @@
   }
 </style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.css" integrity="sha256-zTN0r+0OKaIv2xqeNNIYxNk0pWJ6+IqPGc1iDgVzWF0=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="stylesheet" href="/assets/css/al-folio-cv.css?v=734ded6bdb6d549b12085aded7cf1c5e"> <link rel="canonical" href="https://itorym.github.io/cv/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
     initTheme();
-  </script> <link rel="alternate" hreflang="en" href="https://itorym.github.io/cv/"> <link rel="alternate" hreflang="x-default" href="https://itorym.github.io/cv/"> <link rel="alternate" hreflang="ja" href="https://itorym.github.io/ja/cv/"> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Ryoma Ito </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Home </a> </li> <li class="nav-item active"> <a class="nav-link" href="/cv/">Curriculum Vitae <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/talks/">Talks </a> </li> <li class="nav-item language-switch-item"> <nav class="language-switch-options" aria-label="Language"> <span class="language-switch-option is-current" lang="en" aria-current="true">English</span> <a class="language-switch-option" href="/ja/cv/" lang="ja" hreflang="ja" rel="alternate">日本語</a> </nav> <style>
+  </script> <link rel="alternate" hreflang="en" href="https://itorym.github.io/cv/"> <link rel="alternate" hreflang="x-default" href="https://itorym.github.io/cv/"> <link rel="alternate" hreflang="ja" href="https://itorym.github.io/ja/cv/"> <style>
+      :root {
+        --academic-card-radius: 0.85rem;
+        --academic-card-padding: 1.15rem 1.25rem;
+        --academic-button-height: 2rem;
+        --academic-card-border-color: color-mix(in srgb, var(--global-text-color) 16%, transparent);
+        --academic-card-hover-border-color: color-mix(in srgb, var(--global-theme-color) 35%, transparent);
+      }
+      html:not([data-theme="dark"]) {
+        --global-theme-color: #005ea8;
+        --global-hover-color: #004b87;
+        --academic-card-border-color: color-mix(in srgb, var(--global-text-color) 10%, transparent);
+      }
+      html:lang(en) .container[role="main"] .post-title {
+        letter-spacing: -0.025em;
+      }
+      html:lang(ja) .container[role="main"] .post-title,
+      html:lang(ja) .academic-content .academic-section-heading h2,
+      html:lang(ja) .cv > .card > .card-title,
+      html:lang(ja) .cv > a.anchor + .card > .card-title {
+        letter-spacing: 0.025em;
+        line-height: 1.5;
+      }
+      #navbar .navbar-menu-list > .nav-item > .nav-link {
+        position: relative;
+      }
+      #navbar .navbar-menu-list > .nav-item.active > .nav-link::after {
+        content: "";
+        position: absolute;
+        inset-inline: 0.5rem;
+        bottom: 0.15rem;
+        height: 2px;
+        border-radius: 99px;
+        background: var(--global-theme-color);
+      }
+      #navbar .navbar-menu-list > .nav-item > .nav-link:focus-visible {
+        outline: 2px solid var(--global-theme-color);
+        outline-offset: 2px;
+        border-radius: 0.25rem;
+      }
+      @media (max-width: 680px) {
+        :root {
+          --academic-card-padding: 0.95rem;
+        }
+      }
+    </style> </head> <body class="fixed-top-nav sticky-bottom-footer"> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Ryoma Ito </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Home </a> </li> <li class="nav-item active"> <a class="nav-link" href="/cv/">Curriculum Vitae <span class="sr-only">(current)</span> </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/talks/">Talks </a> </li> <li class="nav-item language-switch-item"> <nav class="language-switch-options" aria-label="Language"> <span class="language-switch-option is-current" lang="en" aria-current="true">English</span> <a class="language-switch-option" href="/ja/cv/" lang="ja" hreflang="ja" rel="alternate">日本語</a> </nav> <style>
     #navbar .language-switch-item {
       display: flex;
       align-items: center;
@@ -333,12 +378,19 @@ html { scrollbar-gutter: stable; }
     min-width: 0;
     margin-left: 0;
     margin-right: 0;
-    padding: 1.2rem 1.3rem;
+    padding: var(--academic-card-padding);
     background: transparent;
-    border: 1px solid var(--academic-cv-border);
-    border-radius: 0.85rem;
+    border: 1px solid var(--academic-card-border-color);
+    border-radius: var(--academic-card-radius);
     box-shadow: none;
     color: var(--academic-cv-text);
+    transition: border-color 0.2s ease;
+  }
+  .cv > .card:hover,
+  .cv > .card:focus-within,
+  .cv > a.anchor + .card:hover,
+  .cv > a.anchor + .card:focus-within {
+    border-color: var(--academic-card-hover-border-color);
   }
   .cv > .card > .card-title,
   .cv > a.anchor + .card > .card-title {
@@ -780,14 +832,14 @@ html { scrollbar-gutter: stable; }
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 1.85rem;
+    min-height: var(--academic-button-height);
     margin: 0;
-    padding: 0.3rem 0.75rem;
+    padding: 0.3rem 0.8rem;
     border: 1px solid color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 35%, transparent);
     border-radius: 99px;
     background: color-mix(in srgb, var(--academic-accent, var(--academic-cv-accent)) 10%, var(--global-bg-color, #111820));
     color: var(--global-text-color, #ecf0f4);
-    font-size: 0.74rem;
+    font-size: 0.8rem;
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: 0.02em;
